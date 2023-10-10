@@ -5,9 +5,9 @@ using UnityEngine.Windows;
 
 public class InputHandler : MonoBehaviour
 {
-    [SerializeField] public Vector2 InputVector { get; set; }
+    public Vector2 InputVector { get; set; }
 
-    [SerializeField] public Vector3 MousePosition { get; set; }
+    public Vector3 MousePosition { get; set; }
 
     // Start is called before the first frame update
     void Start()
