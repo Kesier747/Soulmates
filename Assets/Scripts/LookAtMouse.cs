@@ -9,6 +9,9 @@ public class LookAtMouse : MonoBehaviour
     public GameObject player;
     private Vector3 target;
 
+    [SerializeField] Camera cam;
+    [SerializeField] LayerMask whatIsGround;
+
     // Start is called before the first frame update
     void Start()
     {
