@@ -13,26 +13,27 @@ public class PlayerInput : MonoBehaviour
     [SerializeField] private float sprintSpeed;
     [SerializeField] private float normalSpeed;
     [SerializeField] private float stamina;
+    [SerializeField] private GameObject bolaPrefab;
 
     private Vector3 spawnPoint;
 
-    [SerializeField] private Camera camera;
+    private Camera mainCamera;
     [SerializeField] private LayerMask whatIsGround;
     private float RayLength;
 
+    CharacterController controller;
 
     // Start is called before the first frame update
     void Start()
     {
-        rb= GetComponent<Rigidbody>();
+        controller = GetComponent<CharacterController>();
 
         spawnPoint = transform.position;
 
-        camera = FindObjectOfType<Camera>();
+        mainCamera = FindObjectOfType<Camera>();
     }
 
-    // Update is called once per frame
-    void FixedUpdate()
+    private void Update()
     {
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
@@ -46,19 +47,37 @@ public class PlayerInput : MonoBehaviour
         inputH = Input.GetAxisRaw("Horizontal");
         inputV = Input.GetAxisRaw("Vertical");
 
-        transform.Translate(new Vector3(inputH, 0, inputV).normalized * speed * Time.deltaTime);
+        controller.Move(new Vector3(inputH, 0, inputV).normalized * speed * Time.deltaTime);
 
-        Ray cameraRay = camera.ScreenPointToRay(Input.mousePosition);
-        Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
+        Ray cameraRay = mainCamera.ScreenPointToRay(Input.mousePosition);
+        if(Physics.Raycast(cameraRay, out RaycastHit hit, 500, whatIsGround))
+        {
+            Vector3 directionToLook = (hit.point - transform.position).normalized;
+            directionToLook.y = transform.position.y; //No cambio la altura.
+            Quaternion rotationToLook = Quaternion.LookRotation(directionToLook);
+            transform.rotation = rotationToLook;
+                //Debug.DrawRay(cameraRay.origin, cameraRay.direction * 500, Color.red, 10);
 
-        if (groundPlane.Raycast(cameraRay, out )) ;
+            
+        }
+        //Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
+        
+    }
+    // Update is called once per frame          
+    void FixedUpdate()
+    {
+
+        //if (groundPlane.Raycast(cameraRay, out)
+        //{
+
+        //}
         
     }
 
     //private void FixedUpdate()
     //{
     //    //ForceMode.Force: fuerza continua (FIXED UPDATE)
-    //    //ForceMode.Impulse: fuerza INSTANTÁNEA.
+    //    //ForceMode.Impulse: fuerza INSTANTï¿½NEA.
     //    rb.AddForce(new Vector3(inputH, 0, inputV) * speed ,ForceMode.Impulse);
     //}
 }
