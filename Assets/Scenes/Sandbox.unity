@@ -824,7 +824,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36ac8050feee96b4c8e6963b999b69e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
 --- !u!114 &306765807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -837,6 +836,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 682f5b43ead018e4f8f3a5cca4b5589e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <InputVector>k__BackingField: {x: 0, y: 0}
+  <MousePosition>k__BackingField: {x: 0, y: 0, z: 0}
 --- !u!4 &306765808
 Transform:
   m_ObjectHideFlags: 0
@@ -864,11 +865,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96c217cc5f1fc694081c4be41e16da3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cam: {fileID: 0}
+  distanceToPlayer: {x: 0, y: 0, z: 0}
   whatIsGround:
-    serializedVersion: 2
     m_Bits: 512
   bola: {fileID: 0}
   velocidad: 0
+  rb: {fileID: 0}
 --- !u!1 &313419189
 GameObject:
   m_ObjectHideFlags: 0
@@ -3780,6 +3783,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8369694985403908580, guid: 7f0e65d7f29af144ea6393bc0331b4af,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3527362297938251656, guid: 7f0e65d7f29af144ea6393bc0331b4af, type: 3}

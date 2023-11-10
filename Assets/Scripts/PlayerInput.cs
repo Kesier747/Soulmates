@@ -39,7 +39,7 @@ public class PlayerInput : MonoBehaviour
 
         inputH = Input.GetAxisRaw("Horizontal");
         inputV = Input.GetAxisRaw("Vertical");
-
+       
         controller.Move(new Vector3(inputH, 0, inputV).normalized * speed * Time.deltaTime);
 
         Ray cameraRay = mainCamera.ScreenPointToRay(Input.mousePosition);
@@ -51,15 +51,14 @@ public class PlayerInput : MonoBehaviour
             transform.rotation = rotationToLook;
                 //Debug.DrawRay(cameraRay.origin, cameraRay.direction * 500, Color.red, 10);
 
-            
         }
     }
 
     private void Shoot()
     {
-        if (Input.GetButtonUp("Fire"))
+        if (Input.GetKeyDown(KeyCode.Mouse1))
         {
-            GameObject bulletClone = Instantiate(bulletPrefab);
+            GameObject bulletClone = Instantiate(bulletPrefab, transform.position, transform.rotation);
 
             //spawnPoint.transform.position, transform.rotation
         }
