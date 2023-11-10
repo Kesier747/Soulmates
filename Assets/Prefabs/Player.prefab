@@ -107,8 +107,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3600327787588493326}
   - component: {fileID: 1163760547217774292}
-  - component: {fileID: 3527362297938251656}
-  - component: {fileID: 6309703215608549672}
   - component: {fileID: 4339038004584591096}
   - component: {fileID: 8369694985403908580}
   - component: {fileID: 1416851012894942257}
@@ -152,42 +150,9 @@ MonoBehaviour:
   sprintSpeed: 25
   normalSpeed: 20
   stamina: 100
-  mainCamera: {fileID: 0}
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 512
---- !u!114 &3527362297938251656
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7574601175766160206}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14f551590f92099449587e55a2e9f700, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 0}
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 512
-  bola: {fileID: 0}
---- !u!114 &6309703215608549672
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7574601175766160206}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa8351d7882eb8b4fb554a6259c032a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  crosshair: {fileID: 0}
-  player: {fileID: 7574601175766160206}
-  cam: {fileID: 0}
+  bolaPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 586438390707376597, guid: 3b19afe4b1b8f3045935031caff7d533,
+    type: 3}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 512

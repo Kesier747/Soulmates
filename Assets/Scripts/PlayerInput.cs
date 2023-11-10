@@ -10,12 +10,12 @@ public class PlayerInput : MonoBehaviour
     private float inputH;
     private float inputV;
     [SerializeField] private float speed;
-    [SerializeField] private float sprintSpeed;
     [SerializeField] private float normalSpeed;
     [SerializeField] private float stamina;
-    [SerializeField] private GameObject bolaPrefab;
 
     private Vector3 spawnPoint;
+
+    [SerializeField] private GameObject bulletPrefab;
 
     private Camera mainCamera;
     [SerializeField] private LayerMask whatIsGround;
@@ -27,22 +27,15 @@ public class PlayerInput : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();
-
         spawnPoint = transform.position;
-
         mainCamera = FindObjectOfType<Camera>();
+
+        Shoot();
+
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            speed = sprintSpeed;
-        }
-        else
-        {
-            speed = normalSpeed;
-        }
 
         inputH = Input.GetAxisRaw("Horizontal");
         inputV = Input.GetAxisRaw("Vertical");
@@ -60,24 +53,15 @@ public class PlayerInput : MonoBehaviour
 
             
         }
-        //Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
-        
     }
-    // Update is called once per frame          
-    void FixedUpdate()
+
+    private void Shoot()
     {
+        if (Input.GetButtonUp("Fire"))
+        {
+            GameObject bulletClone = Instantiate(bulletPrefab);
 
-        //if (groundPlane.Raycast(cameraRay, out)
-        //{
-
-        //}
-        
+            //spawnPoint.transform.position, transform.rotation
+        }
     }
-
-    //private void FixedUpdate()
-    //{
-    //    //ForceMode.Force: fuerza continua (FIXED UPDATE)
-    //    //ForceMode.Impulse: fuerza INSTANT�NEA.
-    //    rb.AddForce(new Vector3(inputH, 0, inputV) * speed ,ForceMode.Impulse);
-    //}
 }
