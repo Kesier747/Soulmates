@@ -40,7 +40,10 @@ public class PlayerInput : MonoBehaviour
 
     private void Update()
     {
-        Shoot();
+        if (Time.timeScale != 0)
+        {
+            Shoot();
+        }
         inputH = Input.GetAxisRaw("Horizontal");
         inputV = Input.GetAxisRaw("Vertical");
        
@@ -54,7 +57,7 @@ public class PlayerInput : MonoBehaviour
 
         //Todo esto para que el Player mire en dirección de donde la cámara este apuntando
         Ray cameraRay = mainCamera.ScreenPointToRay(Input.mousePosition);
-        if(Physics.Raycast(cameraRay, out RaycastHit hit, 500, whatIsGround))
+        if(Physics.Raycast(cameraRay, out RaycastHit hit, 500, whatIsGround) && Time.timeScale!= 0)
         {
             Vector3 directionToLook = (hit.point - transform.position).normalized;
             directionToLook.y = transform.position.y; //No cambio la altura.
