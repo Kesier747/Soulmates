@@ -57,10 +57,10 @@ public class PlayerInput : MonoBehaviour
 
         //Todo esto para que el Player mire en dirección de donde la cámara este apuntando
         Ray cameraRay = mainCamera.ScreenPointToRay(Input.mousePosition);
-        if(Physics.Raycast(cameraRay, out RaycastHit hit, 500, whatIsGround) && Time.timeScale!= 0)
+        if(Physics.Raycast(cameraRay, out RaycastHit hit, 1000, whatIsGround) && Time.timeScale!= 0)
         {
             Vector3 directionToLook = (hit.point - transform.position).normalized;
-            directionToLook.y = transform.position.y; //No cambio la altura.
+            directionToLook.y = 0; //No cambio la altura.
             Quaternion rotationToLook = Quaternion.LookRotation(directionToLook);
             transform.rotation = rotationToLook; //La rotación del Player
                 //Debug.DrawRay(cameraRay.origin, cameraRay.direction * 500, Color.red, 10);
