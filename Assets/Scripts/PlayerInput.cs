@@ -10,6 +10,10 @@ public class PlayerInput : MonoBehaviour
 
     private float inputH;
     private float inputV;
+
+    private float gravity = -9.81f;
+    [SerializeField] private float gravityMultiplier;
+    private Vector3 verticalMovement;
  
     [SerializeField] private float speed;
     [SerializeField] private float normalSpeed;
@@ -49,6 +53,8 @@ public class PlayerInput : MonoBehaviour
        
         controller.Move(new Vector3(inputH, 0, inputV).normalized * speed * Time.deltaTime);
 
+        Gravity();
+
         //Para el dash y la corrutina del dash
         if (Input.GetKeyDown(KeyCode.LeftShift) && !dashing)
         { 
@@ -84,4 +90,11 @@ public class PlayerInput : MonoBehaviour
         yield return dashing = false;
 
     }
+
+    private void Gravity()
+    {
+        //verticalMovement.y += Physics.gravity.y * gravityFactor * Time.deltaTime;
+        //controller.Move(verticalMovement * Time.deltaTime);
+    }
+
 }
