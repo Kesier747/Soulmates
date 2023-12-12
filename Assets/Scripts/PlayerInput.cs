@@ -13,7 +13,7 @@ public class PlayerInput : MonoBehaviour
     private float inputV;
 
     private float gravity = -9.81f;
-    [SerializeField] private float gravityMultiplier = 3.0f;
+    [SerializeField] private float gravityMultiplier;
     private float velocity;
     private Vector3 verticalMovement;
  
@@ -30,6 +30,8 @@ public class PlayerInput : MonoBehaviour
 
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private GameObject bulletSpawnPoint;
+
+    [SerializeField] private float lifeTotal;
 
     private Camera mainCamera;
     [SerializeField] private LayerMask whatIsGround;
@@ -87,7 +89,7 @@ public class PlayerInput : MonoBehaviour
 
     private void ApplyGravity()
     {
-        velocity = gravity * gravityMultiplier;
+        velocity += gravity * gravityMultiplier * Time.deltaTime;
         controller.Move (new Vector3(0,velocity,0) * Time.deltaTime);
     }
 
