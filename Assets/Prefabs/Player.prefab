@@ -178,7 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4e1efc571b13ff429f33d5fea7c332e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravityFactor: 0
+  gravityMultiplier: Infinity
   speed: 20
   normalSpeed: 20
   stamina: 100
