@@ -20,9 +20,17 @@ public class BasicBullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer = timer - 1 * Time.deltaTime;
+        
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+            
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(other.gameObject);
 
-        if (timer <= 0)
+        }
+        else
         {
             Destroy(gameObject);
         }
