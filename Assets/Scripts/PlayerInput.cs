@@ -91,6 +91,18 @@ public class PlayerInput : MonoBehaviour
     {
         velocity += gravity * gravityMultiplier * Time.deltaTime;
         controller.Move (new Vector3(0,velocity,0) * Time.deltaTime);
+
+        if (TouchingGround()) 
+        {
+            velocity = -7;
+        }
+    }
+
+    bool TouchingGround()
+    {
+        bool TouchingGround = Physics.Raycast(transform.position, new Vector3(0, -1, 0), 3f, whatIsGround);
+
+        return TouchingGround;
     }
 
     private void Shoot() //Pues pa disparar
