@@ -101,7 +101,6 @@ public class PlayerInput : MonoBehaviour
     bool TouchingGround()
     {
         bool TouchingGround = Physics.Raycast(transform.position, new Vector3(0, -1, 0), 3f, whatIsGround);
-
         return TouchingGround;
     }
 
@@ -110,7 +109,6 @@ public class PlayerInput : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             GameObject bulletClone = Instantiate(bulletPrefab, bulletSpawnPoint.transform.position, transform.rotation);
-
             //spawnPoint.transform.position, transform.rotation
         }
     }
@@ -120,7 +118,14 @@ public class PlayerInput : MonoBehaviour
         dashing = true;
         controller.Move(new Vector3(inputH, 0, inputV).normalized * dashPower * Time.deltaTime);
         yield return dashing = false;
-
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("DeathFloor"))
+        {
+            this.gameObject.SetActive(false);
+        }
+
+    }
 }

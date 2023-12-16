@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4632862346478048127}
   - component: {fileID: 4632862346478048126}
   - component: {fileID: 4632862346478048125}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: DeathFloor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
