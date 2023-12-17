@@ -93,7 +93,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 5be8c1d2d76f5bc49b1098591375d2d8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -188,6 +188,8 @@ MonoBehaviour:
   bulletPrefab: {fileID: 586438390707376597, guid: 3b19afe4b1b8f3045935031caff7d533,
     type: 3}
   bulletSpawnPoint: {fileID: 1645745585088081781}
+  lifeTotal: 0
+  deadState: 0
   whatIsGround:
     serializedVersion: 2
     m_Bits: 512
@@ -219,7 +221,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 5be8c1d2d76f5bc49b1098591375d2d8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

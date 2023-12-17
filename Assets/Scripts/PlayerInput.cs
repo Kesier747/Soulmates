@@ -31,23 +31,31 @@ public class PlayerInput : MonoBehaviour
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private GameObject bulletSpawnPoint;
 
+
     [SerializeField] private float lifeTotal;
+    [SerializeField] public bool deadState;
+
+    private bool yellowKeyAdquired = false;
 
     private Camera mainCamera;
     [SerializeField] private LayerMask whatIsGround;
     private float RayLength;
 
     CharacterController controller;
+   
 
     void Start()
     {
         controller = GetComponent<CharacterController>();
         spawnPoint = transform.position;
         mainCamera = FindObjectOfType<Camera>();
+        deadState = true;
     }
 
     private void Update()
     {
+        Debug.Log(lifeTotal + " llave : " + yellowKeyAdquired);
+
         if (Time.timeScale != 0)
         {
             Shoot();
@@ -63,6 +71,7 @@ public class PlayerInput : MonoBehaviour
             StartCoroutine(Dash());
         }
 
+        DeathState();
     }
 
     private void ApplyMovement()
@@ -124,8 +133,22 @@ public class PlayerInput : MonoBehaviour
     {
         if (other.gameObject.CompareTag("DeathFloor"))
         {
-            this.gameObject.SetActive(false);
+            lifeTotal -= 1000;
         }
 
+        if (other.gameObject.CompareTag("Key"))
+        {
+            Destroy(other.gameObject);
+            yellowKeyAdquired = true;
+        }
+
+    }
+
+    private void DeathState()
+    {
+        if(lifeTotal <= 0) 
+        {
+            deadState = false;
+        }
     }
 }
