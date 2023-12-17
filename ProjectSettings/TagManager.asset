@@ -9,6 +9,7 @@ TagManager:
   - Key
   - DeathFloor
   - Enemy
+  - YellowDoor
   layers:
   - Default
   - TransparentFX

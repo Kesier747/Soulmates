@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class PlayerInput : MonoBehaviour
 {
@@ -33,9 +34,12 @@ public class PlayerInput : MonoBehaviour
 
 
     [SerializeField] private float lifeTotal;
-    [SerializeField] public bool deadState;
+    public bool deadState = false;
 
     private bool yellowKeyAdquired = false;
+    [SerializeField] private GameObject endMenuUI;
+    [SerializeField] private GameObject deathMenuUI;
+
 
     private Camera mainCamera;
     [SerializeField] private LayerMask whatIsGround;
@@ -49,7 +53,6 @@ public class PlayerInput : MonoBehaviour
         controller = GetComponent<CharacterController>();
         spawnPoint = transform.position;
         mainCamera = FindObjectOfType<Camera>();
-        deadState = true;
     }
 
     private void Update()
@@ -71,7 +74,10 @@ public class PlayerInput : MonoBehaviour
             StartCoroutine(Dash());
         }
 
-        DeathState();
+        if(lifeTotal <= 0)
+        {
+            Death();
+        }
     }
 
     private void ApplyMovement()
@@ -129,6 +135,12 @@ public class PlayerInput : MonoBehaviour
         yield return dashing = false;
     }
 
+    private void Death()
+    {
+            Time.timeScale = 0f;
+            deathMenuUI.SetActive(true);        
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("DeathFloor"))
@@ -142,13 +154,22 @@ public class PlayerInput : MonoBehaviour
             yellowKeyAdquired = true;
         }
 
-    }
-
-    private void DeathState()
-    {
-        if(lifeTotal <= 0) 
+        if (other.gameObject.CompareTag("YellowDoor") && yellowKeyAdquired == true)
         {
-            deadState = false;
+            Time.timeScale = 0f;
+            endMenuUI.SetActive(true);
         }
     }
+
+    //private void DeathState()
+    //{
+    //    if(lifeTotal <= 0) 
+    //    {
+    //        deadState = false;
+    //    }
+    //    else
+    //    {
+    //        deadState = true;
+    //    }
+    //}
 }
