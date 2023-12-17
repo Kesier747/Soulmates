@@ -1,0 +1,1 @@
+Casi todos los modelados en FBXs y Prefabs han sido hechos por Clara, excepto la pistola principal,Prop_Box01 y Prop_BasicLongWall que las ha hecho Juan Luengo Nuñez, el modelo del enemigo (Robot) ha sido realizado por Lucía y Clara
