@@ -51,15 +51,15 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-    void Dead()
-    {
-        deathMenuUI.SetActive(true);
-        Time.timeScale = 0f;
+    //void Dead()
+    //{
+    //    deathMenuUI.SetActive(true);
+    //    Time.timeScale = 0f;
         
-    }
+    //}
 
     public void Respawn()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(0);
     }
 }
