@@ -10,6 +10,7 @@ TagManager:
   - DeathFloor
   - Enemy
   - YellowDoor
+  - Spawn1
   layers:
   - Default
   - TransparentFX

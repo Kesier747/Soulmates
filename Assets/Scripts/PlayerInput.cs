@@ -124,6 +124,7 @@ public class PlayerInput : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             GameObject bulletClone = Instantiate(bulletPrefab, bulletSpawnPoint.transform.position, transform.rotation);
+
             //spawnPoint.transform.position, transform.rotation
         }
     }
@@ -158,6 +159,11 @@ public class PlayerInput : MonoBehaviour
         {
             Time.timeScale = 0f;
             endMenuUI.SetActive(true);
+        }
+
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            lifeTotal -= 20;
         }
     }
 

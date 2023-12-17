@@ -22,17 +22,18 @@ public class BasicBullet : MonoBehaviour
     {
         
     }
+
     private void OnTriggerEnter(Collider other)
-    {
-            
+    {      
         if (other.gameObject.CompareTag("Enemy"))
         {
             Destroy(other.gameObject);
-
-        }
-        else
-        {
             Destroy(gameObject);
         }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Destroy(gameObject);
     }
 }

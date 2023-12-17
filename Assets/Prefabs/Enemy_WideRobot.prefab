@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7872683755983485962}
   - component: {fileID: 5505918201555129965}
   - component: {fileID: 7003628903512109138}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: punta pie Izq
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 733674950672419545}
   - component: {fileID: 302486924248644073}
   - component: {fileID: 7805867720271138994}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: CodoDch1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 8488286065243637293}
   - component: {fileID: 2072945433956831559}
   - component: {fileID: 5251182856477283482}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: antenaIzq
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 5423852289186444488}
   - component: {fileID: 3259099094803209936}
   - component: {fileID: 5002553517519294611}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: espinillaDch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -343,7 +343,9 @@ GameObject:
   - component: {fileID: 396174453041250094}
   - component: {fileID: 4414091776496302801}
   - component: {fileID: -7929271830561198377}
-  m_Layer: 0
+  - component: {fileID: -6818069422543622235}
+  - component: {fileID: 24572195}
+  m_Layer: 10
   m_Name: Enemy_WideRobot
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -404,6 +406,7 @@ Transform:
   - {fileID: 2619987477306776579}
   - {fileID: 4649280207704071095}
   - {fileID: 3047096330614390844}
+  - {fileID: 8019652523677592235}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -415,7 +418,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1023634590124467604}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 1.687665
   m_Height: 6.188407
@@ -433,6 +436,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44dc8c32f9e5c3b499987f1bb77695aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &-6818069422543622235
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023634590124467604}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!195 &24572195
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023634590124467604}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.59
+  m_Speed: 6
+  m_Acceleration: 150
+  avoidancePriority: 50
+  m_AngularSpeed: 907.1
+  m_StoppingDistance: 0.5
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &1109861659976983407
 GameObject:
   m_ObjectHideFlags: 0
@@ -444,7 +485,7 @@ GameObject:
   - component: {fileID: 6695682051848342150}
   - component: {fileID: 8732179685167773006}
   - component: {fileID: 243596635869794858}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: oidoIzq
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -527,7 +568,7 @@ GameObject:
   - component: {fileID: 8372949752194937449}
   - component: {fileID: 983932292386553173}
   - component: {fileID: 5270928068886019578}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: dedoDch3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -611,7 +652,7 @@ GameObject:
   - component: {fileID: 4355555805047783160}
   - component: {fileID: 2462314022350575940}
   - component: {fileID: 4935267592917692214}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: posaderas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -694,7 +735,7 @@ GameObject:
   - component: {fileID: 2565244580336880761}
   - component: {fileID: 2894069079957941062}
   - component: {fileID: 6993487607498284421}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: CodoIzq1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -777,7 +818,7 @@ GameObject:
   - component: {fileID: 4504035121350548135}
   - component: {fileID: 7629344055285573116}
   - component: {fileID: 6704887040406042709}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cododch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -860,7 +901,7 @@ GameObject:
   - component: {fileID: 2619987477306776579}
   - component: {fileID: 8874455222468852266}
   - component: {fileID: 9212149683738218632}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SoporteHombroIzq
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -943,7 +984,7 @@ GameObject:
   - component: {fileID: 302453563463485395}
   - component: {fileID: 9175720284314970164}
   - component: {fileID: 7211549467085579474}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: barriga
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1029,7 +1070,7 @@ GameObject:
   - component: {fileID: 5047043084326950087}
   - component: {fileID: 6481110061029480657}
   - component: {fileID: 4225174071963261936}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EncajeBrazoDch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1112,7 +1153,7 @@ GameObject:
   - component: {fileID: 5254346123861646969}
   - component: {fileID: 7087537276793285701}
   - component: {fileID: 957974216941537138}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: dedoDch2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1196,7 +1237,7 @@ GameObject:
   - component: {fileID: 3047096330614390844}
   - component: {fileID: 1542679559075922234}
   - component: {fileID: 59712164046788972}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: soporteOidoIzq
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1279,7 +1320,7 @@ GameObject:
   - component: {fileID: 5703769795212455856}
   - component: {fileID: 1093690708165035108}
   - component: {fileID: 6629629021279221579}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DecoracionCinturon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1362,7 +1403,7 @@ GameObject:
   - component: {fileID: 7049562110667627571}
   - component: {fileID: 7036885426057416398}
   - component: {fileID: 8674287102834289438}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SoporteHombroDch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1445,7 +1486,7 @@ GameObject:
   - component: {fileID: 5207880011150674915}
   - component: {fileID: 5822424083089124888}
   - component: {fileID: 3794190877154473561}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: CodoIzq
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1528,7 +1569,7 @@ GameObject:
   - component: {fileID: 5383355314466230448}
   - component: {fileID: 4737007295577219633}
   - component: {fileID: 5317373741539226563}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: AnteBrazoDch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1612,7 +1653,7 @@ GameObject:
   - component: {fileID: 5376770964053036906}
   - component: {fileID: 3144789767520566079}
   - component: {fileID: 2468695469494972688}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EncajeBrazoIzq
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1695,7 +1736,7 @@ GameObject:
   - component: {fileID: 4649280207704071095}
   - component: {fileID: 8497850631866845510}
   - component: {fileID: 1311081672501284203}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: soporteOidoDch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1778,7 +1819,7 @@ GameObject:
   - component: {fileID: 4769508138912736750}
   - component: {fileID: 5685498822237933921}
   - component: {fileID: 545204887351672433}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pieIzq
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1861,7 +1902,7 @@ GameObject:
   - component: {fileID: 6350931440849254913}
   - component: {fileID: 3240291747970161431}
   - component: {fileID: 8218848854039795374}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BrazoDch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1944,7 +1985,7 @@ GameObject:
   - component: {fileID: 3537223572255378456}
   - component: {fileID: 8779389287611932371}
   - component: {fileID: 8351760790180187118}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: dedoIzq3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2027,7 +2068,7 @@ GameObject:
   - component: {fileID: 5428023019956983096}
   - component: {fileID: 7243872824139965026}
   - component: {fileID: 1377142327105445815}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: rodillaDch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2110,7 +2151,7 @@ GameObject:
   - component: {fileID: 2116826874483257495}
   - component: {fileID: 6966872430078207261}
   - component: {fileID: 8210499397207567802}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: antenaDch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2193,7 +2234,7 @@ GameObject:
   - component: {fileID: 3571156936385167885}
   - component: {fileID: 2224921579457975051}
   - component: {fileID: 6264901724285811318}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cabeza
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2276,7 +2317,7 @@ GameObject:
   - component: {fileID: 8612048208915371829}
   - component: {fileID: 2108057307457381230}
   - component: {fileID: 683424473974225103}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SoporteCododch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2359,7 +2400,7 @@ GameObject:
   - component: {fileID: 8503556724583900131}
   - component: {fileID: 5970434289558648377}
   - component: {fileID: 4901225838756462493}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: dedoIzq1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2442,7 +2483,7 @@ GameObject:
   - component: {fileID: 7483735754095414597}
   - component: {fileID: 6761920249650549470}
   - component: {fileID: 5388285740450146523}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cuerpo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2525,7 +2566,7 @@ GameObject:
   - component: {fileID: 1719044390342771015}
   - component: {fileID: 890045072886200956}
   - component: {fileID: 6633717990361242603}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: manoIzq
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2597,6 +2638,103 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &5063941837533278355
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8019652523677592235}
+  - component: {fileID: 290768606106980603}
+  - component: {fileID: 402123341853968487}
+  - component: {fileID: 5762489353706301637}
+  m_Layer: 0
+  m_Name: "Collider da\xF1o"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8019652523677592235
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5063941837533278355}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.01, y: 2.6531496, z: 0.04}
+  m_LocalScale: {x: 5.5503454, y: 5.509051, z: 4.834658}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 396174453041250094}
+  m_RootOrder: 42
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &290768606106980603
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5063941837533278355}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &402123341853968487
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5063941837533278355}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5762489353706301637
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5063941837533278355}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5377429057315519900
 GameObject:
   m_ObjectHideFlags: 0
@@ -2608,7 +2746,7 @@ GameObject:
   - component: {fileID: 1822099894674080658}
   - component: {fileID: 2372219679884087391}
   - component: {fileID: 8178361772584513960}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: punta pie dch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2691,7 +2829,7 @@ GameObject:
   - component: {fileID: 6617315797760698856}
   - component: {fileID: 4968426963551489087}
   - component: {fileID: 8141591630902698742}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: AnteBrazoIzq
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2774,7 +2912,7 @@ GameObject:
   - component: {fileID: 3386575964981928339}
   - component: {fileID: 6009828927374173749}
   - component: {fileID: 4447679625359812131}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: dedoDch1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2858,7 +2996,7 @@ GameObject:
   - component: {fileID: 7224104260582574778}
   - component: {fileID: 7292187066250442243}
   - component: {fileID: 7548568890127204246}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SoporteCodoDch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2941,7 +3079,7 @@ GameObject:
   - component: {fileID: 9186006670092254215}
   - component: {fileID: 8004915429718008618}
   - component: {fileID: 8696697499697697395}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: posaderas002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3024,7 +3162,7 @@ GameObject:
   - component: {fileID: 3255170662828399760}
   - component: {fileID: 3674255423322013065}
   - component: {fileID: 1004497907449272874}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: CodoDcho2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3107,7 +3245,7 @@ GameObject:
   - component: {fileID: 3092527108267868692}
   - component: {fileID: 7305549376066178438}
   - component: {fileID: 5907885808399606507}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pieDch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3190,7 +3328,7 @@ GameObject:
   - component: {fileID: 2846362405832429360}
   - component: {fileID: 494078386918196800}
   - component: {fileID: 2055985093085254925}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: musloIzq
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3273,7 +3411,7 @@ GameObject:
   - component: {fileID: 6035573805025955850}
   - component: {fileID: 1017403721476259440}
   - component: {fileID: 8511435364623656403}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: manodch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3359,7 +3497,7 @@ GameObject:
   - component: {fileID: 9061889312127274928}
   - component: {fileID: 7882069683587131750}
   - component: {fileID: 184145150418161640}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: cinturon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3442,7 +3580,7 @@ GameObject:
   - component: {fileID: 7260483474149607744}
   - component: {fileID: 3530054528621832856}
   - component: {fileID: 8768037802663528887}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: musloDch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3525,7 +3663,7 @@ GameObject:
   - component: {fileID: 6280930340556403897}
   - component: {fileID: 6523868932401986805}
   - component: {fileID: 6320159483623318887}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: oidoDch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3608,7 +3746,7 @@ GameObject:
   - component: {fileID: 6229037045227847606}
   - component: {fileID: 2799234529497007748}
   - component: {fileID: 4586687447298847646}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: rodillaIzq
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3691,7 +3829,7 @@ GameObject:
   - component: {fileID: 2046827954235623583}
   - component: {fileID: 6019874120151662382}
   - component: {fileID: 393724116143194198}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: CodoIzq2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3774,7 +3912,7 @@ GameObject:
   - component: {fileID: 3737305060421551447}
   - component: {fileID: 7778650781075169871}
   - component: {fileID: 8459181354642280327}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BrazoIzq
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3857,7 +3995,7 @@ GameObject:
   - component: {fileID: 3016939440100681597}
   - component: {fileID: 825760439757318067}
   - component: {fileID: 3767971583755654297}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: espinillaIzq
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3940,7 +4078,7 @@ GameObject:
   - component: {fileID: 411783439077113427}
   - component: {fileID: 7719380558417720432}
   - component: {fileID: 7827220584623686274}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: dedoIzq2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4023,7 +4161,7 @@ GameObject:
   - component: {fileID: 752107007431601300}
   - component: {fileID: 9069739291718638390}
   - component: {fileID: 3669025557485782418}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: HombroIzq
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4106,7 +4244,7 @@ GameObject:
   - component: {fileID: 621490285300778938}
   - component: {fileID: 65511068829425563}
   - component: {fileID: 6778188144788786036}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: HombroDch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
