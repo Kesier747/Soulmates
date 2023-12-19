@@ -31,6 +31,7 @@ public class PlayerInput : MonoBehaviour
 
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private GameObject bulletSpawnPoint;
+    [SerializeField] private float pistolDamage;
 
 
     [SerializeField] private float lifeTotal;

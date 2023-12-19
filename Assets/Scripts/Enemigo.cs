@@ -7,6 +7,8 @@ public class Enemigo : MonoBehaviour
 {
     NavMeshAgent agent;
     PlayerInput target;
+
+
     // Start is called before the first frame update
     void Start()
     {

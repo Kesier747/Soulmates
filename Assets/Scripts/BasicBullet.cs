@@ -6,18 +6,15 @@ public class BasicBullet : MonoBehaviour
 {
     private Rigidbody rb;
 
-    [SerializeField] private float strengh;
-    [SerializeField, Range(0, 100)] private int damage;
+    [SerializeField] private float pistolBulletStrengh;
+    [SerializeField, Range(0, 100)] private int pistolDamage;
 
-    float timer = 2;
-    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        rb.AddForce(transform.forward * strengh, ForceMode.Impulse);
+        rb.AddForce(transform.forward * pistolBulletStrengh, ForceMode.Impulse);
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -27,8 +24,8 @@ public class BasicBullet : MonoBehaviour
     {      
         if (other.gameObject.CompareTag("Enemy"))
         {
-            Destroy(other.gameObject);
-            Destroy(gameObject);
+            other.gameObject.GetComponent<WideRobot>().ReceiveDamage(pistolDamage);
+            Destroy(gameObject);          
         }
     }
 
