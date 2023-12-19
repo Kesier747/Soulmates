@@ -11,6 +11,7 @@ TagManager:
   - Enemy
   - YellowDoor
   - Spawn1
+  - EnemyDetector
   layers:
   - Default
   - TransparentFX

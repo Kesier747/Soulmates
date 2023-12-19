@@ -38,8 +38,12 @@ public class WideRobot : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    //private void OnTriggerEnter(Collider other)
-    //{
-        
-    //}
+    private void OnTriggerEnter(Collider other)
+    {
+        //if (other.gameObject.CompareTag("Enemy"))
+        //{
+        //    other.gameObject.GetComponent<WideRobot>().ReceiveDamage(pistolDamage);
+        //    Destroy(gameObject);
+        //}
+    }
 }

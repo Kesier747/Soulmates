@@ -3084,7 +3084,7 @@ GameObject:
   - component: {fileID: 2881349247131064522}
   - component: {fileID: 8029148494488101925}
   m_Layer: 0
-  m_Name: Cuber
+  m_Name: WideRobotDetectionCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
