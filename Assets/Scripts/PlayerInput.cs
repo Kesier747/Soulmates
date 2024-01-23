@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -36,6 +37,7 @@ public class PlayerInput : MonoBehaviour
 
     [SerializeField] private float lifeTotal;
     public bool deadState = false;
+    [SerializeField] private TMP_Text playerHealthText;
 
     private bool yellowKeyAdquired = false;
     [SerializeField] private GameObject endMenuUI;
@@ -58,6 +60,8 @@ public class PlayerInput : MonoBehaviour
 
     private void Update()
     {
+
+        playerHealthText.text = "Vida = " + lifeTotal;
         Debug.Log(lifeTotal + " llave : " + yellowKeyAdquired);
 
         if (Time.timeScale != 0)
@@ -79,6 +83,8 @@ public class PlayerInput : MonoBehaviour
         {
             Death();
         }
+        
+
     }
 
     private void ApplyMovement()
