@@ -38,6 +38,7 @@ public class PlayerInput : MonoBehaviour
     [SerializeField] private float lifeTotal;
     public bool deadState = false;
     [SerializeField] private TMP_Text playerHealthText;
+    [SerializeField] private GameObject[] lifes;
 
     private bool yellowKeyAdquired = false;
     [SerializeField] private GameObject endMenuUI;
@@ -78,12 +79,39 @@ public class PlayerInput : MonoBehaviour
         { 
             StartCoroutine(Dash());
         }
-
-        if(lifeTotal <= 0)
+        if(lifeTotal <= 70)
         {
-            Death();
+            lifes[0].SetActive(false);
         }
-        
+        else if(lifeTotal <= 60)
+        {
+            lifes[1].SetActive(false);
+        }
+        else if (lifeTotal <= 50)
+        {
+            lifes[2].SetActive(false);
+        }
+        else if (lifeTotal <= 40)
+        {
+            lifes[3].SetActive(false);
+        }
+        else if (lifeTotal <= 30)
+        {
+            lifes[4].SetActive(false);
+        }
+        else if (lifeTotal <= 20)
+        {
+            lifes[5].SetActive(false);
+        }
+        else if (lifeTotal <= 10)
+        {
+            lifes[6].SetActive(false);
+        }
+        else if (lifeTotal <= 0)
+        {
+            lifes[7].SetActive(false);
+        }
+
 
     }
 
