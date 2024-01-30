@@ -35,7 +35,8 @@ public class PlayerInput : MonoBehaviour
     [SerializeField] private float pistolDamage;
 
 
-    [SerializeField] private float lifeTotal;
+    private int currentLife;
+    [SerializeField] private int lifeInit;
     public bool deadState = false;
     [SerializeField] private TMP_Text playerHealthText;
     [SerializeField] private GameObject[] lifes;
@@ -54,6 +55,7 @@ public class PlayerInput : MonoBehaviour
 
     void Start()
     {
+        currentLife = lifeInit;
         controller = GetComponent<CharacterController>();
         spawnPoint = transform.position;
         mainCamera = FindObjectOfType<Camera>();
@@ -62,8 +64,8 @@ public class PlayerInput : MonoBehaviour
     private void Update()
     {
 
-        playerHealthText.text = "Vida = " + lifeTotal;
-        Debug.Log(lifeTotal + " llave : " + yellowKeyAdquired);
+        playerHealthText.text = "Vida = " + currentLife;
+        Debug.Log(currentLife + " llave : " + yellowKeyAdquired);
 
         if (Time.timeScale != 0)
         {
@@ -78,38 +80,6 @@ public class PlayerInput : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftShift) && !dashing)
         { 
             StartCoroutine(Dash());
-        }
-        if(lifeTotal <= 70)
-        {
-            lifes[0].SetActive(false);
-        }
-        else if(lifeTotal <= 60)
-        {
-            lifes[1].SetActive(false);
-        }
-        else if (lifeTotal <= 50)
-        {
-            lifes[2].SetActive(false);
-        }
-        else if (lifeTotal <= 40)
-        {
-            lifes[3].SetActive(false);
-        }
-        else if (lifeTotal <= 30)
-        {
-            lifes[4].SetActive(false);
-        }
-        else if (lifeTotal <= 20)
-        {
-            lifes[5].SetActive(false);
-        }
-        else if (lifeTotal <= 10)
-        {
-            lifes[6].SetActive(false);
-        }
-        else if (lifeTotal <= 0)
-        {
-            lifes[7].SetActive(false);
         }
 
 
@@ -181,7 +151,7 @@ public class PlayerInput : MonoBehaviour
     {
         if (other.gameObject.CompareTag("DeathFloor"))
         {
-            lifeTotal -= 1000;
+            currentLife -= 1000;
         }
 
         if (other.gameObject.CompareTag("Key"))
@@ -198,13 +168,25 @@ public class PlayerInput : MonoBehaviour
 
         if (other.gameObject.CompareTag("Enemy"))
         {
-            lifeTotal -= 20;
+            currentLife -= 20;
+                                  //80
+            for (int i = currentLife /10; i < lifeInit /10; i++)
+            {
+                lifes[i].SetActive(false);
+
+            }
+           
+
+            if(currentLife <= 0)
+            {
+                Death();
+            }
         }
     }
 
     //private void DeathState()
     //{
-    //    if(lifeTotal <= 0) 
+    //    if(currentLife <= 0) 
     //    {
     //        deadState = false;
     //    }
