@@ -30,10 +30,14 @@ public class PlayerInput : MonoBehaviour
 
     private Vector3 spawnPoint;
 
-    [SerializeField] private GameObject bulletPrefab;
-    [SerializeField] private GameObject bulletSpawnPoint;
-    [SerializeField] private float pistolDamage;
+    private bool pistolHeld = false;
+    private bool submachinegunHeld = false;
 
+    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private GameObject pistolBulletSpawnPoint;
+    [SerializeField] private GameObject submachinegunBulletSpawnPoint;
+    [SerializeField] private float pistolDamage;
+    [SerializeField] private float SubmachinegunDamage;
 
     private int currentLife;
     [SerializeField] private int lifeInit;
@@ -44,7 +48,10 @@ public class PlayerInput : MonoBehaviour
     private bool yellowKeyAdquired = false;
     [SerializeField] private GameObject endMenuUI;
     [SerializeField] private GameObject deathMenuUI;
+    [SerializeField] private GameObject pistolIconUI;
 
+    [SerializeField] private GameObject pistol;
+    [SerializeField] private GameObject submachinegun;
 
     private Camera mainCamera;
     [SerializeField] private LayerMask whatIsGround;
@@ -52,18 +59,20 @@ public class PlayerInput : MonoBehaviour
 
     CharacterController controller;
    
-
     void Start()
     {
         currentLife = lifeInit;
         controller = GetComponent<CharacterController>();
         spawnPoint = transform.position;
         mainCamera = FindObjectOfType<Camera>();
+
+        //submachinegunHeld= true;
+        pistolHeld = false;
+        pistolIconUI.SetActive(false);
     }
 
     private void Update()
     {
-
         playerHealthText.text = "Vida = " + currentLife;
         Debug.Log(currentLife + " llave : " + yellowKeyAdquired);
 
@@ -76,13 +85,40 @@ public class PlayerInput : MonoBehaviour
         ApplyRotation();
         ApplyGravity();
 
-        //Para el dash y la corrutina del dash
         if (Input.GetKeyDown(KeyCode.LeftShift) && !dashing)
         { 
             StartCoroutine(Dash());
         }
 
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            EquippingPistol();
+        }
 
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            EquippingSubmachinegun();
+        }
+    }
+
+    private void EquippingPistol()
+    {
+        pistolHeld = true;
+        pistol.SetActive(true);
+        pistolIconUI.SetActive(true);
+
+        submachinegunHeld = false;
+        submachinegun.SetActive(false);
+    }
+
+    private void EquippingSubmachinegun()
+    {
+        submachinegunHeld = true;
+        submachinegun.SetActive(true);
+
+        pistolHeld = false;
+        pistol.SetActive(false);
+        pistolIconUI.SetActive(false);
     }
 
     private void ApplyMovement()
@@ -102,8 +138,7 @@ public class PlayerInput : MonoBehaviour
             Vector3 directionToLook = (hit.point - transform.position).normalized;
             directionToLook.y = 0; //No cambio la altura.
             Quaternion rotationToLook = Quaternion.LookRotation(directionToLook);
-            transform.rotation = rotationToLook; //La rotación del Player
-                                                 //Debug.DrawRay(cameraRay.origin, cameraRay.direction * 500, Color.red, 10);
+            transform.rotation = rotationToLook; //La rotación del Player //Debug.DrawRay(cameraRay.origin, cameraRay.direction * 500, Color.red, 10);
         }
     }
 
@@ -126,11 +161,20 @@ public class PlayerInput : MonoBehaviour
 
     private void Shoot() //Pues pa disparar
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (pistolHeld == true)
         {
-            GameObject bulletClone = Instantiate(bulletPrefab, bulletSpawnPoint.transform.position, transform.rotation);
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                GameObject bulletClone = Instantiate(bulletPrefab, pistolBulletSpawnPoint.transform.position, transform.rotation);
+            }
+        }
 
-            //spawnPoint.transform.position, transform.rotation
+        else if (submachinegunHeld == true)
+        {
+            if (Input.GetKey(KeyCode.Mouse0))
+            {
+                GameObject bulletClone = Instantiate(bulletPrefab, submachinegunBulletSpawnPoint.transform.position, transform.rotation);
+            }
         }
     }
 
@@ -173,26 +217,12 @@ public class PlayerInput : MonoBehaviour
             for (int i = currentLife /10; i < lifeInit /10; i++)
             {
                 lifes[i].SetActive(false);
-
             }
            
-
             if(currentLife <= 0)
             {
                 Death();
             }
         }
     }
-
-    //private void DeathState()
-    //{
-    //    if(currentLife <= 0) 
-    //    {
-    //        deadState = false;
-    //    }
-    //    else
-    //    {
-    //        deadState = true;
-    //    }
-    //}
 }
