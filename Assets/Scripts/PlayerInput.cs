@@ -33,6 +33,8 @@ public class PlayerInput : MonoBehaviour
     private bool pistolHeld = false;
     private bool submachinegunHeld = false;
 
+    private float overheat;
+    private bool overheated = false;
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private GameObject pistolBulletSpawnPoint;
     [SerializeField] private GameObject submachinegunBulletSpawnPoint;
@@ -69,12 +71,13 @@ public class PlayerInput : MonoBehaviour
         //submachinegunHeld= true;
         pistolHeld = false;
         pistolIconUI.SetActive(false);
+        overheat = 0;
+        overheated= false;
     }
 
     private void Update()
     {
         playerHealthText.text = "Vida = " + currentLife;
-        Debug.Log(currentLife + " llave : " + yellowKeyAdquired);
 
         if (Time.timeScale != 0)
         {
@@ -99,6 +102,10 @@ public class PlayerInput : MonoBehaviour
         {
             EquippingSubmachinegun();
         }
+
+        HeatCooling();
+        Debug.Log("heating " + overheat);
+        Debug.Log("heated = " + overheated);
     }
 
     private void EquippingPistol()
@@ -161,19 +168,48 @@ public class PlayerInput : MonoBehaviour
 
     private void Shoot() //Pues pa disparar
     {
-        if (pistolHeld == true)
+        if (pistolHeld == true && overheat <= 100 && overheated == false)
         {
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 GameObject bulletClone = Instantiate(bulletPrefab, pistolBulletSpawnPoint.transform.position, transform.rotation);
+                overheat += 10;
             }
         }
 
-        else if (submachinegunHeld == true)
+        else if (submachinegunHeld == true && overheat <= 100 && overheated == false)
         {
             if (Input.GetKey(KeyCode.Mouse0))
             {
                 GameObject bulletClone = Instantiate(bulletPrefab, submachinegunBulletSpawnPoint.transform.position, transform.rotation);
+            }
+        }
+    }
+
+    private void HeatCooling()
+    {
+        if (overheated == false)
+        {
+            overheat -= 5 * Time.deltaTime;
+        }
+
+        if (overheat <= 0)
+        {
+            overheat = 0;
+        }
+
+        if (overheat >= 100 && overheated == false)
+        {
+            overheated = true;
+        }
+
+        if (overheated == true)
+        {
+            overheat -= 25 * Time.deltaTime;
+
+            if(overheat <= 0 && overheated == true)
+            {
+                overheated = false;
             }
         }
     }
@@ -213,7 +249,6 @@ public class PlayerInput : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy"))
         {
             currentLife -= 20;
-                                  //80
             for (int i = currentLife /10; i < lifeInit /10; i++)
             {
                 lifes[i].SetActive(false);
