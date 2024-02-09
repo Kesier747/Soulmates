@@ -104,7 +104,7 @@ public class PlayerInput : MonoBehaviour
         }
 
         HeatCooling();
-        Debug.Log("heating " + overheat);
+        Debug.Log(overheat);
         Debug.Log("heated = " + overheated);
     }
 
