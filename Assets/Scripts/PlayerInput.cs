@@ -51,6 +51,8 @@ public class PlayerInput : MonoBehaviour
     [SerializeField] private GameObject endMenuUI;
     [SerializeField] private GameObject deathMenuUI;
     [SerializeField] private GameObject pistolIconUI;
+    [SerializeField] private GameObject SubmachinegunIconUI;
+    [SerializeField] private GameObject swordIconUI;
 
     [SerializeField] private GameObject pistol;
     [SerializeField] private GameObject submachinegun;
@@ -73,6 +75,8 @@ public class PlayerInput : MonoBehaviour
         pistolIconUI.SetActive(false);
         overheat = 0;
         overheated= false;
+
+        EquippingPistol();
     }
 
     private void Update()
@@ -93,15 +97,15 @@ public class PlayerInput : MonoBehaviour
             StartCoroutine(Dash());
         }
 
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            EquippingPistol();
-        }
+        //if (Input.GetKeyDown(KeyCode.E))
+        //{
+        //    EquippingPistol();
+        //}
 
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            EquippingSubmachinegun();
-        }
+        //if (Input.GetKeyDown(KeyCode.Q))
+        //{
+        //    EquippingSubmachinegun();
+        //}
 
         HeatCooling();
         Debug.Log(overheat);
@@ -122,6 +126,7 @@ public class PlayerInput : MonoBehaviour
     {
         submachinegunHeld = true;
         submachinegun.SetActive(true);
+        SubmachinegunIconUI.SetActive(true);
 
         pistolHeld = false;
         pistol.SetActive(false);
