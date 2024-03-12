@@ -97,15 +97,15 @@ public class PlayerInput : MonoBehaviour
             StartCoroutine(Dash());
         }
 
-        //if (Input.GetKeyDown(KeyCode.E))
-        //{
-        //    EquippingPistol();
-        //}
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            EquippingPistol();
+        }
 
-        //if (Input.GetKeyDown(KeyCode.Q))
-        //{
-        //    EquippingSubmachinegun();
-        //}
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            EquippingSubmachinegun();
+        }
 
         HeatCooling();
         Debug.Log(overheat);
@@ -187,6 +187,7 @@ public class PlayerInput : MonoBehaviour
             if (Input.GetKey(KeyCode.Mouse0))
             {
                 GameObject bulletClone = Instantiate(bulletPrefab, submachinegunBulletSpawnPoint.transform.position, transform.rotation);
+                overheat += 1f;
             }
         }
     }
