@@ -120,6 +120,7 @@ public class PlayerInput : MonoBehaviour
 
         submachinegunHeld = false;
         submachinegun.SetActive(false);
+        SubmachinegunIconUI.SetActive(false);
     }
 
     private void EquippingSubmachinegun()
