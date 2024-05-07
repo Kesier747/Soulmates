@@ -48,6 +48,9 @@ public class PlayerInput : MonoBehaviour
     [SerializeField] private GameObject[] lifes;
 
     private bool yellowKeyAdquired = false;
+
+    private bool WeaponUIActive = true;
+
     [SerializeField] private GameObject endMenuUI;
     [SerializeField] private GameObject deathMenuUI;
     [SerializeField] private GameObject pistolIconUI;
@@ -86,6 +89,13 @@ public class PlayerInput : MonoBehaviour
         if (Time.timeScale != 0)
         {
             Shoot();
+            WeaponUIActive = true;
+        }
+
+        if(Time.timeScale == 0) 
+        {
+            UnequippingAnyWeapon();
+            WeaponUIActive = false;
         }
 
         ApplyMovement();
@@ -97,12 +107,12 @@ public class PlayerInput : MonoBehaviour
             StartCoroutine(Dash());
         }
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && WeaponUIActive == true)
         {
             EquippingPistol();
         }
 
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Q) && WeaponUIActive == true)
         {
             EquippingSubmachinegun();
         }
@@ -132,6 +142,12 @@ public class PlayerInput : MonoBehaviour
         pistolHeld = false;
         pistol.SetActive(false);
         pistolIconUI.SetActive(false);
+    }
+
+    private void UnequippingAnyWeapon()
+    {
+        pistolIconUI.SetActive(false);
+        SubmachinegunIconUI.SetActive(false);
     }
 
     private void ApplyMovement()
