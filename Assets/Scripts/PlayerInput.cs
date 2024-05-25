@@ -5,6 +5,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerInput : MonoBehaviour
 {
@@ -56,6 +57,9 @@ public class PlayerInput : MonoBehaviour
     [SerializeField] private GameObject pistolIconUI;
     [SerializeField] private GameObject SubmachinegunIconUI;
     [SerializeField] private GameObject swordIconUI;
+
+    //[SerializeField] private GameObject heatBarUI;
+    [SerializeField] public Image heatCooldown;
 
     [SerializeField] private GameObject pistol;
     [SerializeField] private GameObject submachinegun;
@@ -195,7 +199,7 @@ public class PlayerInput : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 GameObject bulletClone = Instantiate(bulletPrefab, pistolBulletSpawnPoint.transform.position, transform.rotation);
-                overheat += 10;
+                overheat += 10f;
             }
         }
 
@@ -204,7 +208,7 @@ public class PlayerInput : MonoBehaviour
             if (Input.GetKey(KeyCode.Mouse0))
             {
                 GameObject bulletClone = Instantiate(bulletPrefab, submachinegunBulletSpawnPoint.transform.position, transform.rotation);
-                overheat += 1f;
+                overheat += 2f;
             }
         }
     }
@@ -213,7 +217,7 @@ public class PlayerInput : MonoBehaviour
     {
         if (overheated == false)
         {
-            overheat -= 5 * Time.deltaTime;
+            overheat -= 30 * Time.deltaTime;
         }
 
         if (overheat <= 0)
@@ -235,6 +239,10 @@ public class PlayerInput : MonoBehaviour
                 overheated = false;
             }
         }
+
+        heatCooldown.fillAmount = overheat/100f;
+
+        //heatBarUI.fillAmount = overheat;
     }
 
     private IEnumerator Dash() //El dash y eso

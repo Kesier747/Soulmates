@@ -9,6 +9,8 @@ public class BasicBullet : MonoBehaviour
     [SerializeField] private float pistolBulletStrengh;
     [SerializeField, Range(0, 100)] private int pistolDamage;
 
+   
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -33,4 +35,5 @@ public class BasicBullet : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
 }
