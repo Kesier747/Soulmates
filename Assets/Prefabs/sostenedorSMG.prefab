@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3174470729153533607}
   - component: {fileID: 858229327794446957}
   - component: {fileID: 373162913411696859}
+  - component: {fileID: 8560598441499725382}
   m_Layer: 13
   m_Name: sostenedorSMG
   m_TagString: WeaponPickup
@@ -98,6 +99,26 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.03689063, y: 0.038735747, z: 0.07396519}
   m_Center: {x: -0.00009532511, y: 0.00011969328, z: 0.018367445}
+--- !u!95 &8560598441499725382
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218777264614605752}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 642ee0807082b964abc9e56d646563b5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1001 &2008408003021210078
 PrefabInstance:
   m_ObjectHideFlags: 0
