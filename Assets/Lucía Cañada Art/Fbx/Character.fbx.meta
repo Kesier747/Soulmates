@@ -16,7 +16,9 @@ ModelImporter:
     optimizeGameObjects: 0
     removeConstantScaleCurves: 1
     motionNodeName: 
-    rigImportErrors: 
+    rigImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tFound
+      duplicate transform 'H_Anular_Izq' for human bone 'Right Ring Proximal' and
+      'Left Ring Proximal'\n"
     rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
@@ -56,7 +58,7 @@ ModelImporter:
     skinWeightsMode: 0
     maxBonesPerVertex: 4
     minBoneWeight: 0.001
-    optimizeBones: 1
+    optimizeBones: 0
     meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
@@ -79,8 +81,504 @@ ModelImporter:
   importAnimation: 1
   humanDescription:
     serializedVersion: 3
-    human: []
-    skeleton: []
+    human:
+    - boneName: H_Spine_2
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: H_Femur_Izq
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: H_Femur_Dcha
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: H_Tibia_Izq
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: H_Tibia_Dcha
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: H_Pie_Izq
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: H_Pie_Dcha
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: H_Spine_1
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: H_Cuello
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: H_Coleta_2
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: H_Coleta_3
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: H_Clavicula_Izq
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: H_Clavicula_Dcha
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: H_Humero_Izq
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: H_Humero_Dcha
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: H_Radio_Izq
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: H_Radio_Dcha
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: H_Mano_Izq
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: H_Mano_Dcha
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: H_DedosPie_Izq
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: H_DedosPie_Dcha
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: H_Coleta_4
+      humanName: Jaw
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: H_Pulgar_Izq
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: H_Indice_Izq
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: H_Corazon_Izq
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: H_Anular_Izq
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: "H_Me\xF1ique_Izq"
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: H_Pulgar_Dcha
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: H_Indice_Dcha
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: H_Corazon_Dcha
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: H_Anular_Izq
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: "H_Me\xF1ique_Dcha"
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Character(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: default
+      parentName: Character(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bip001
+      parentName: Character(Clone)
+      position: {x: -0.01828401, y: 0.03980802, z: 3.3737118e-18}
+      rotation: {x: -0.50000036, y: 0.49999964, z: 0.49999964, w: 0.50000036}
+      scale: {x: 1, y: 1, z: 1}
+    - name: H_Pelvis
+      parentName: Bip001
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.5, y: 0.5, z: 0.4999993, w: 0.5000007}
+      scale: {x: 1, y: 1, z: 1}
+    - name: H_Spine_2
+      parentName: H_Pelvis
+      position: {x: -1.9916222, y: -0.00033270754, z: -0.018283606}
+      rotation: {x: -0.0000020908421, y: 0.00000070421305, z: -0.01571773, w: 0.9998765}
+      scale: {x: 1, y: 1, z: 1}
+    - name: H_Spine_1
+      parentName: H_Spine_2
+      position: {x: -0.414793, y: -0.00033012658, z: -0.0000000018924475}
+      rotation: {x: 3.1190453e-14, y: 0.000000042490495, z: -0.015319617, w: 0.9998827}
+      scale: {x: 1, y: 1, z: 1}
+    - name: H_Cuello
+      parentName: H_Spine_1
+      position: {x: -0.46438166, y: 0.03359589, z: 0.00000004731119}
+      rotation: {x: 2.1760368e-14, y: 7.1054265e-15, z: -1.546167e-28, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: H_Clavicula_Izq
+      parentName: H_Cuello
+      position: {x: 0.13953225, y: -0.046106998, z: 0.096856914}
+      rotation: {x: -0.583234, y: -0.0009411279, z: 0.81230325, w: 0.0008570916}
+      scale: {x: 1, y: 1, z: 1}
+    - name: H_Humero_Izq
+      parentName: H_Clavicula_Izq
+      position: {x: -0.20739181, y: -0.00000000756979, z: 0}
+      rotation: {x: 0.014340968, y: 0.14150427, z: -0.0071120583, w: 0.9898082}
+      scale: {x: 1, y: 1, z: 1}
+    - name: H_Radio_Izq
+      parentName: H_Humero_Izq
+      position: {x: -0.41794208, y: -0.00000000756979, z: -0.00000006055832}
+      rotation: {x: -0.005468203, y: 0.018414404, z: 0.03072653, w: 0.9993432}
+      scale: {x: 1, y: 1, z: 1}
+    - name: H_Mano_Izq
+      parentName: H_Radio_Izq
+      position: {x: -0.5249001, y: 0.00000004541874, z: -0.00000006055832}
+      rotation: {x: -0.66662705, y: 0.16207105, z: -0.09405832, w: 0.721453}
+      scale: {x: 1, y: 1, z: 1}
+    - name: H_Pulgar_Izq
+      parentName: H_Mano_Izq
+      position: {x: -0.14985701, y: 0.017540354, z: -0.09923774}
+      rotation: {x: 0.40801305, y: -0.38308844, z: -0.21227638, w: 0.8010664}
+      scale: {x: 1, y: 1, z: 1}
+    - name: H_Indice_Izq
+      parentName: H_Mano_Izq
+      position: {x: -0.21358144, y: -0.016771507, z: -0.034859672}
+      rotation: {x: -0.00039816095, y: -9.313225e-10, z: -3.7081628e-13, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1}
+    - name: H_Corazon_Izq
+      parentName: H_Mano_Izq
+      position: {x: -0.221667, y: -0.001293223, z: 0.007497135}
+      rotation: {x: 0.0019534607, y: -0.00006156534, z: 0.05291002, w: 0.9985974}
+      scale: {x: 1, y: 1, z: 1}
+    - name: H_Anular_Izq
+      parentName: H_Mano_Izq
+      position: {x: -0.20726885, y: 0.008317565, z: 0.04843135}
+      rotation: {x: -0.00039816095, y: -9.313225e-10, z: -3.7081628e-13, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1}
+    - name: "H_Me\xF1ique_Izq"
+      parentName: H_Mano_Izq
+      position: {x: -0.21436392, y: 0.038031716, z: 0.072063334}
+      rotation: {x: -0.00034949847, y: -0.00019073751, z: -0.47904631, w: 0.87778956}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bip001 LUpArmTwist
+      parentName: H_Clavicula_Izq
+      position: {x: -0.20739181, y: -0.00000000756979, z: 0}
+      rotation: {x: 0.03932376, y: -0.29504234, z: -0.037374258, w: 0.9539428}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bip001 LUpArmTwist1
+      parentName: Bip001 LUpArmTwist
+      position: {x: -0.10448557, y: -0.00000001513958, z: 0}
+      rotation: {x: -0.009026595, y: -0.000000014900555, z: -1.3450675e-10, w: 0.9999593}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bip001 LUpArmTwist2
+      parentName: Bip001 LUpArmTwist1
+      position: {x: -0.10448557, y: -0.00000000756979, z: 0.00000006055832}
+      rotation: {x: -0.009026597, y: 0, z: -0, w: 0.9999593}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bip001 LUpArmTwist3
+      parentName: Bip001 LUpArmTwist2
+      position: {x: -0.10448548, y: 0, z: -0.00000006055832}
+      rotation: {x: -0.009026597, y: 0.000000014900555, z: 1.3450678e-10, w: 0.9999593}
+      scale: {x: 1, y: 1, z: 1}
+    - name: H_Clavicula_Dcha
+      parentName: H_Cuello
+      position: {x: 0.14159286, y: -0.033522427, z: -0.1030582}
+      rotation: {x: 0.5863606, y: -0.00069879397, z: 0.81004715, w: -0.0021292353}
+      scale: {x: 1, y: 1, z: 1}
+    - name: H_Humero_Dcha
+      parentName: H_Clavicula_Dcha
+      position: {x: -0.2555482, y: -0.000000003784895, z: -0.00000006055832}
+      rotation: {x: -0.043679122, y: -0.13373187, z: -0.011428651, w: 0.9899885}
+      scale: {x: 1, y: 1, z: 1}
+    - name: H_Radio_Dcha
+      parentName: H_Humero_Dcha
+      position: {x: -0.40427926, y: 0, z: 0}
+      rotation: {x: 0.008647362, y: -0.02328808, z: 0.031605374, w: 0.99919164}
+      scale: {x: 1, y: 1, z: 1}
+    - name: H_Mano_Dcha
+      parentName: H_Radio_Dcha
+      position: {x: -0.53879124, y: -0.00000000756979, z: 0}
+      rotation: {x: 0.81050134, y: -0.1425339, z: -0.09840073, w: 0.55954355}
+      scale: {x: 1, y: 1, z: 1}
+    - name: H_Pulgar_Dcha
+      parentName: H_Mano_Dcha
+      position: {x: -0.1027576, y: 0.05478887, z: 0.07905604}
+      rotation: {x: -0.44145158, y: 0.20515971, z: -0.10443119, w: 0.8672509}
+      scale: {x: 1, y: 1, z: 1}
+    - name: H_Indice_Dcha
+      parentName: H_Mano_Dcha
+      position: {x: -0.20131542, y: -0.01455604, z: 0.034668792}
+      rotation: {x: 0.00039814043, y: 0.000000007450581, z: -2.9663776e-12, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1}
+    - name: H_Corazon_Dcha
+      parentName: H_Mano_Dcha
+      position: {x: -0.20416911, y: -0.022678668, z: -0.011391474}
+      rotation: {x: 0.00039780422, y: 0.000016693846, z: -0.04192284, w: 0.9991208}
+      scale: {x: 1, y: 1, z: 1}
+    - name: H_Anular_Izq
+      parentName: H_Mano_Dcha
+      position: {x: -0.19682793, y: -0.010274748, z: -0.05248311}
+      rotation: {x: 0.00039319697, y: -0.15707538, z: -0.00006254547, w: 0.98758656}
+      scale: {x: 1, y: 1, z: 1}
+    - name: "H_Me\xF1ique_Dcha"
+      parentName: H_Mano_Dcha
+      position: {x: -0.18626025, y: 0.010683275, z: -0.08815929}
+      rotation: {x: -0.029317062, y: -0.059687313, z: -0.4016772, w: 0.9133638}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bip001 RUpArmTwist
+      parentName: H_Clavicula_Dcha
+      position: {x: -0.2555482, y: -0.000000003784895, z: -0.00000006055832}
+      rotation: {x: -0.0552863, y: 0.18949285, z: -0.08705761, w: 0.97645116}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bip001 RUpArmTwist1
+      parentName: Bip001 RUpArmTwist
+      position: {x: -0.10106981, y: 0, z: 0}
+      rotation: {x: 0.0068493304, y: 0, z: -0, w: 0.9999766}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bip001 RUpArmTwist2
+      parentName: Bip001 RUpArmTwist1
+      position: {x: -0.10106984, y: -0.00000001513958, z: 0}
+      rotation: {x: 0.00684933, y: -0.00000001490081, z: 1.02062955e-10, w: 0.9999766}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bip001 RUpArmTwist3
+      parentName: Bip001 RUpArmTwist2
+      position: {x: -0.10106978, y: 0, z: 0}
+      rotation: {x: 0.0068493458, y: -0.000000029852657, z: -0.00000000724628, w: 0.9999766}
+      scale: {x: 1, y: 1, z: 1}
+    - name: H_Cabeza
+      parentName: H_Cuello
+      position: {x: -0.11964895, y: 0.00000002270937, z: -0.020014886}
+      rotation: {x: -9.0095046e-14, y: -0.000000086074756, z: 0.03103428, w: 0.99951833}
+      scale: {x: 1, y: 1, z: 1}
+    - name: H_Coleta_1
+      parentName: H_Cabeza
+      position: {x: -0.45848766, y: -0.17821161, z: 0.0017306999}
+      rotation: {x: 0.0000006250391, y: -0.0000002033964, z: 0.33555615, w: 0.94202024}
+      scale: {x: 1, y: 1, z: 1}
+    - name: H_Coleta_2
+      parentName: H_Coleta_1
+      position: {x: -0.20641449, y: 0.00000006055832, z: -0.00000002126043}
+      rotation: {x: 0.0000016108567, y: -0.000001298607, z: -0.14115119, w: 0.9899881}
+      scale: {x: 1, y: 1, z: 1}
+    - name: H_Coleta_3
+      parentName: H_Coleta_2
+      position: {x: -0.27662897, y: 0, z: -0.0000000013529198}
+      rotation: {x: -2.9369427e-15, y: 6.470041e-15, z: 0.4133381, w: 0.91057765}
+      scale: {x: 1, y: 1, z: 1}
+    - name: H_Coleta_4
+      parentName: H_Coleta_3
+      position: {x: -0.2096959, y: 0.00000009083748, z: 0.00000003255535}
+      rotation: {x: 8.7985175e-15, y: -1.2133544e-15, z: -0.13661152, w: 0.9906247}
+      scale: {x: 1, y: 1, z: 1}
+    - name: H_Coleta_5
+      parentName: H_Coleta_4
+      position: {x: -0.26665658, y: 0, z: 0.000000029585216}
+      rotation: {x: -1.6239712e-15, y: -7.776348e-15, z: 0.25492656, w: 0.96696043}
+      scale: {x: 1, y: 1, z: 1}
+    - name: H_Coleta_Fin
+      parentName: H_Coleta_5
+      position: {x: -0.24620283, y: 0, z: 7.2191144e-15}
+      rotation: {x: 0, y: -7.105425e-15, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: H_Femur_Izq
+      parentName: H_Spine_2
+      position: {x: 0.18337102, y: 0.0060963244, z: 0.15953197}
+      rotation: {x: -0.1307703, y: 0.9911906, z: -0.0020926998, w: 0.020881172}
+      scale: {x: 1, y: 1, z: 1}
+    - name: H_Tibia_Izq
+      parentName: H_Femur_Izq
+      position: {x: -0.96475595, y: 0.000000008516014, z: -0.00000001513958}
+      rotation: {x: 0.0000000013806888, y: -0.0000000015590087, z: 0.25820675, w: 0.9660897}
+      scale: {x: 1, y: 1, z: 1}
+    - name: H_Pie_Izq
+      parentName: H_Tibia_Izq
+      position: {x: -0.69073385, y: -0.00000003027916, z: 0.00000001513958}
+      rotation: {x: 0.003042561, y: 0.020764003, z: -0.14516188, w: 0.9891854}
+      scale: {x: 1, y: 1, z: 1}
+    - name: H_DedosPie_Izq
+      parentName: H_Pie_Izq
+      position: {x: -0.1834618, y: 0.23610738, z: 0}
+      rotation: {x: -0.00000001545431, y: 0.00000001545431, z: -0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: H_Femur_Dcha
+      parentName: H_Spine_2
+      position: {x: 0.18337102, y: 0.0060972096, z: -0.15953194}
+      rotation: {x: -0.12889455, y: 0.9912148, z: 0.0028773798, w: -0.029515084}
+      scale: {x: 1, y: 1, z: 1}
+    - name: H_Tibia_Dcha
+      parentName: H_Femur_Dcha
+      position: {x: -0.9647562, y: -0.0000000066235666, z: 0}
+      rotation: {x: -0.0000000013136023, y: -0.0000000022832745, z: 0.26029438, w: 0.9655293}
+      scale: {x: 1, y: 1, z: 1}
+    - name: H_Pie_Dcha
+      parentName: H_Tibia_Dcha
+      position: {x: -0.6907339, y: 0.00000003027916, z: 0}
+      rotation: {x: -0.004445496, y: -0.029319951, z: -0.14910965, w: 0.9883759}
+      scale: {x: 1, y: 1, z: 1}
+    - name: H_DedosPie_Dcha
+      parentName: H_Pie_Dcha
+      position: {x: -0.20831166, y: 0.2680881, z: 0.00000001513958}
+      rotation: {x: -0.00000001545431, y: 0.00000001545431, z: -0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
