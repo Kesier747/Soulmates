@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1984469351817057463}
   - component: {fileID: 3181120000349674258}
   - component: {fileID: 847077505468428248}
+  - component: {fileID: 9218128382580168757}
   m_Layer: 0
   m_Name: PropLamp
   m_TagString: Untagged
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &9218128382580168757
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1207405539404074509}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.013353336, y: 0.06604266, z: 0.15139534}
+  m_Center: {x: 0, y: -0.0039108433, z: 0.06569766}
