@@ -11,12 +11,13 @@ GameObject:
   - component: {fileID: 7535160679053365476}
   - component: {fileID: 6862816382916534081}
   - component: {fileID: 8708106160523733899}
+  - component: {fileID: -7702548375617559390}
   m_Layer: 0
   m_Name: PropWoordenPlank02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &7535160679053365476
 Transform:
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &-7702548375617559390
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7194944720882616926}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.401287, y: 4.3133206, z: 0.38557762}
+  m_Center: {x: -4.609293, y: 0, z: -0.19278845}

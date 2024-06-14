@@ -11,12 +11,13 @@ GameObject:
   - component: {fileID: 7941386806494632390}
   - component: {fileID: 6456651879418500707}
   - component: {fileID: 9114817137964868265}
+  - component: {fileID: -6607427219660848170}
   m_Layer: 0
   m_Name: PropTank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &7941386806494632390
 Transform:
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &-6607427219660848170
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7313469303178019708}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.176916, y: 6.4772224, z: 7.27149}
+  m_Center: {x: 1.6770661, y: 0.885622, z: -2.3335533}

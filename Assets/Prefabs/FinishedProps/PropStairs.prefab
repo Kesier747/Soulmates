@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2441803534833105466}
   - component: {fileID: 1606902116034164127}
   - component: {fileID: 3578157990887997781}
+  - component: {fileID: 269878873751236391}
   m_Layer: 0
   m_Name: PropStairs
   m_TagString: Untagged
@@ -83,3 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &269878873751236391
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3073944017586970752}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -172000913342090231, guid: ee166efc5088c0147904d4df4a2a797a, type: 3}

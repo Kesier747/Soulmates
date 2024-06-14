@@ -11,12 +11,13 @@ GameObject:
   - component: {fileID: 128495526347110538}
   - component: {fileID: 3920200498697369391}
   - component: {fileID: 1262044583583974373}
+  - component: {fileID: -8168833567339852540}
   m_Layer: 0
   m_Name: PropTriCrate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &128495526347110538
 Transform:
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &-8168833567339852540
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757540063190262320}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.05001055, y: 0.031335164, z: 0.022531679}
+  m_Center: {x: 0.0000000018626451, y: 0, z: -0.00127885}

@@ -11,12 +11,13 @@ GameObject:
   - component: {fileID: 2745127211656444263}
   - component: {fileID: 1276626676776007362}
   - component: {fileID: 3914624762908082696}
+  - component: {fileID: 2249885366881072904}
   m_Layer: 0
   m_Name: PropConveyor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2745127211656444263
 Transform:
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2249885366881072904
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3266083944402658269}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.05966559, y: 0.13226223, z: 0.08950662}
+  m_Center: {x: -0.0017149858, y: 0.0047282046, z: -0.0024646292}

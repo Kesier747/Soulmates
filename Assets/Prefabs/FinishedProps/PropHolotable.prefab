@@ -11,12 +11,13 @@ GameObject:
   - component: {fileID: 2518466315010464025}
   - component: {fileID: 1539307828050876092}
   - component: {fileID: 3654758068700553846}
+  - component: {fileID: 1928471914478950519}
   m_Layer: 0
   m_Name: PropHolotable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2518466315010464025
 Transform:
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1928471914478950519
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3006350018015396771}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 12.181184, y: 6.2972317, z: 2.999592}
+  m_Center: {x: 0, y: 0, z: 1.4876143}
