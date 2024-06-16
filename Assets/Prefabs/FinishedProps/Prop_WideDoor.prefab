@@ -11,12 +11,13 @@ GameObject:
   - component: {fileID: 7119627135313450916}
   - component: {fileID: 6152520436108761089}
   - component: {fileID: 8252516415643905227}
+  - component: {fileID: -8983225209692362679}
   m_Layer: 0
   m_Name: Prop_WideDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &7119627135313450916
 Transform:
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &-8983225209692362679
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7603817268721962270}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 15.515095, y: 9.905325, z: 2.1651711}
+  m_Center: {x: 0.000008344654, y: -3.3768828, z: -0.11688082}

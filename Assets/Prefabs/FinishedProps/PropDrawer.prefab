@@ -11,12 +11,13 @@ GameObject:
   - component: {fileID: 1280910766447999334}
   - component: {fileID: 2767864510136202947}
   - component: {fileID: 111914145821278729}
+  - component: {fileID: -450076331851829322}
   m_Layer: 0
   m_Name: PropDrawer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1280910766447999334
 Transform:
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &-450076331851829322
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1913296616319312860}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.4144053, y: 2.683623, z: 2.396314}
+  m_Center: {x: 0.06030917, y: 0.8617031, z: 1.3802152}

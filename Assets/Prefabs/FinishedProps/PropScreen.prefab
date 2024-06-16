@@ -11,12 +11,13 @@ GameObject:
   - component: {fileID: 483602153723934047}
   - component: {fileID: 3538072347650767610}
   - component: {fileID: 1656538804473548336}
+  - component: {fileID: 1020010116451751042}
   m_Layer: 0
   m_Name: PropScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &483602153723934047
 Transform:
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1020010116451751042
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1008183117378514917}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.4901931, y: 3.767203, z: 0.2839496}
+  m_Center: {x: 1.0358425, y: 1.6256635e-11, z: -0.13964346}

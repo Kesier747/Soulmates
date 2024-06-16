@@ -11,12 +11,13 @@ GameObject:
   - component: {fileID: 9015610320877310056}
   - component: {fileID: 5382428571466981325}
   - component: {fileID: 7878710055412116231}
+  - component: {fileID: -3618837261812001282}
   m_Layer: 0
   m_Name: PropWardrobe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &9015610320877310056
 Transform:
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &-3618837261812001282
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8527057359217658578}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5228002, y: 3.7493782, z: 5.952328}
+  m_Center: {x: 0.11909911, y: 0, z: 2.976164}

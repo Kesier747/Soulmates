@@ -11,12 +11,13 @@ GameObject:
   - component: {fileID: 2241504296190336112}
   - component: {fileID: 2933171418464048085}
   - component: {fileID: 1103452915872311071}
+  - component: {fileID: 5242754840367326615}
   m_Layer: 0
   m_Name: PropBarrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2241504296190336112
 Transform:
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5242754840367326615
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1463877568789710538}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.3480275, y: 1.3480278, z: 2.56553}
+  m_Center: {x: 0, y: 0, z: 1.282765}

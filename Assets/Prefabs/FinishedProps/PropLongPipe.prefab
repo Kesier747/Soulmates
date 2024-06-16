@@ -11,12 +11,13 @@ GameObject:
   - component: {fileID: 4889279349689610993}
   - component: {fileID: 8391875425292909908}
   - component: {fileID: 6021622168448207262}
+  - component: {fileID: 6812686354657755702}
   m_Layer: 0
   m_Name: PropLongPipe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &4889279349689610993
 Transform:
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &6812686354657755702
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5229212453725186123}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 9.609093, y: 0.51296455, z: 0.5129644}
+  m_Center: {x: -4.8045464, y: 0.00000038743028, z: -0.00000041723263}
