@@ -12,16 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c01700fd266d6914ababb731e09af2eb, type: 3}
   m_Name: DepthOfField
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   mode:
     m_OverrideState: 1
     m_Value: 1
   gaussianStart:
     m_OverrideState: 1
-    m_Value: 56.09
+    m_Value: 48.4
   gaussianEnd:
-    m_OverrideState: 0
-    m_Value: 30
+    m_OverrideState: 1
+    m_Value: 37.5
   gaussianMaxRadius:
     m_OverrideState: 0
     m_Value: 1
@@ -66,14 +66,14 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: 0.94
   scatter:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0.557
   clamp:
     m_OverrideState: 0
     m_Value: 65545.74
   tint:
     m_OverrideState: 1
-    m_Value: {r: 0.17003639, g: 0.85882354, b: 0.0039215535, a: 1}
+    m_Value: {r: 0.6813892, g: 0.44281775, b: 0.8773585, a: 1}
   highQualityFiltering:
     m_OverrideState: 1
     m_Value: 1
