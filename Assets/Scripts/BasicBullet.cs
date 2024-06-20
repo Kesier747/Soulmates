@@ -8,18 +8,11 @@ public class BasicBullet : MonoBehaviour
 
     [SerializeField] private float pistolBulletStrengh;
     [SerializeField, Range(0, 100)] private int pistolDamage;
-
-   
-
+  
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.AddForce(transform.forward * pistolBulletStrengh, ForceMode.Impulse);
-    }
-
-    void Update()
-    {
-        
     }
 
     private void OnTriggerEnter(Collider other)

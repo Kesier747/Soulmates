@@ -13,6 +13,7 @@ TagManager:
   - Spawn1
   - EnemyDetector
   - WeaponPickup
+  - RifleBullet
   layers:
   - Default
   - TransparentFX

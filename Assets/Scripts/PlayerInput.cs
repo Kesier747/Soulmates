@@ -38,6 +38,7 @@ public class PlayerInput : MonoBehaviour
     private float overheat;
     private bool overheated = false;
     [SerializeField] private GameObject pistolBulletPrefab;
+    [SerializeField] private GameObject rifleBulletPrefab;
     [SerializeField] private GameObject pistolBulletSpawnPoint;
     [SerializeField] private GameObject submachinegunBulletSpawnPoint;
     [SerializeField] private GameObject rifleBulletSpawnPoint;
@@ -248,8 +249,8 @@ public class PlayerInput : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
-                GameObject bulletClone = Instantiate(pistolBulletPrefab, submachinegunBulletSpawnPoint.transform.position, transform.rotation);
-                overheat += 20f;
+                GameObject bulletClone = Instantiate(rifleBulletPrefab, rifleBulletSpawnPoint.transform.position, transform.rotation);
+                overheat += 40f;
             }
         }
     }
