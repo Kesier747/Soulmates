@@ -33,12 +33,14 @@ public class PlayerInput : MonoBehaviour
 
     private bool pistolHeld = false;
     private bool submachinegunHeld = false;
+    private bool rifleHeld = false;
 
     private float overheat;
     private bool overheated = false;
-    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private GameObject pistolBulletPrefab;
     [SerializeField] private GameObject pistolBulletSpawnPoint;
     [SerializeField] private GameObject submachinegunBulletSpawnPoint;
+    [SerializeField] private GameObject rifleBulletSpawnPoint;
     [SerializeField] private float pistolDamage;
     [SerializeField] private float SubmachinegunDamage;
 
@@ -51,18 +53,19 @@ public class PlayerInput : MonoBehaviour
     private bool yellowKeyAdquired = false;
 
     private bool WeaponUIActive = true;
-
+    [SerializeField] private GameObject gameplayUI;
     [SerializeField] private GameObject endMenuUI;
     [SerializeField] private GameObject deathMenuUI;
     [SerializeField] private GameObject pistolIconUI;
     [SerializeField] private GameObject SubmachinegunIconUI;
-    [SerializeField] private GameObject swordIconUI;
+    [SerializeField] private GameObject rifleIconUI;
 
     //[SerializeField] private GameObject heatBarUI;
     [SerializeField] public Image heatCooldown;
 
     [SerializeField] private GameObject pistol;
     [SerializeField] private GameObject submachinegun;
+    [SerializeField] private GameObject rifle;
 
     private Camera mainCamera;
     [SerializeField] private LayerMask whatIsGround;
@@ -77,6 +80,7 @@ public class PlayerInput : MonoBehaviour
         spawnPoint = transform.position;
         mainCamera = FindObjectOfType<Camera>();
 
+        gameplayUI.SetActive(true);
         //submachinegunHeld= true;
         pistolHeld = false;
         pistolIconUI.SetActive(false);
@@ -94,12 +98,14 @@ public class PlayerInput : MonoBehaviour
         {
             Shoot();
             WeaponUIActive = true;
+            //gameplayUI.setActive(true);
         }
 
         if(Time.timeScale == 0) 
         {
             UnequippingAnyWeapon();
             WeaponUIActive = false;
+            //gameplayUI.setActive(false);
         }
 
         ApplyMovement();
@@ -111,14 +117,19 @@ public class PlayerInput : MonoBehaviour
             StartCoroutine(Dash());
         }
 
-        if (Input.GetKeyDown(KeyCode.E) && WeaponUIActive == true)
+        if (Input.GetKeyDown(KeyCode.Alpha1) && WeaponUIActive == true)
         {
             EquippingPistol();
         }
 
-        if (Input.GetKeyDown(KeyCode.Q) && WeaponUIActive == true)
+        if (Input.GetKeyDown(KeyCode.Alpha2) && WeaponUIActive == true)
         {
             EquippingSubmachinegun();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha3) && WeaponUIActive == true)
+        {
+            EquippingRifle();
         }
 
         HeatCooling();
@@ -135,6 +146,9 @@ public class PlayerInput : MonoBehaviour
         submachinegunHeld = false;
         submachinegun.SetActive(false);
         SubmachinegunIconUI.SetActive(false);
+        rifleHeld = false;
+        rifle.SetActive(false);
+        rifleIconUI.SetActive(false);
     }
 
     private void EquippingSubmachinegun()
@@ -146,6 +160,24 @@ public class PlayerInput : MonoBehaviour
         pistolHeld = false;
         pistol.SetActive(false);
         pistolIconUI.SetActive(false);
+        rifleHeld = false;
+        rifle.SetActive(false);
+        rifleIconUI.SetActive(false);
+
+    }
+
+    private void EquippingRifle()
+    {
+        rifleHeld = true;
+        rifle.SetActive(true);
+        rifleIconUI.SetActive(true);
+
+        pistolHeld = false;
+        pistol.SetActive(false);
+        pistolIconUI.SetActive(false);
+        submachinegunHeld = false;
+        submachinegun.SetActive(false);
+        SubmachinegunIconUI.SetActive(false);
     }
 
     private void UnequippingAnyWeapon()
@@ -198,7 +230,7 @@ public class PlayerInput : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
-                GameObject bulletClone = Instantiate(bulletPrefab, pistolBulletSpawnPoint.transform.position, transform.rotation);
+                GameObject bulletClone = Instantiate(pistolBulletPrefab, pistolBulletSpawnPoint.transform.position, transform.rotation);
                 overheat += 10f;
             }
         }
@@ -207,8 +239,17 @@ public class PlayerInput : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.Mouse0))
             {
-                GameObject bulletClone = Instantiate(bulletPrefab, submachinegunBulletSpawnPoint.transform.position, transform.rotation);
+                GameObject bulletClone = Instantiate(pistolBulletPrefab, submachinegunBulletSpawnPoint.transform.position, transform.rotation);
                 overheat += 2f;
+            }
+        }
+
+        else if (rifleHeld == true && overheat <= 100 && overheated == false)
+        {
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                GameObject bulletClone = Instantiate(pistolBulletPrefab, submachinegunBulletSpawnPoint.transform.position, transform.rotation);
+                overheat += 20f;
             }
         }
     }
@@ -255,7 +296,8 @@ public class PlayerInput : MonoBehaviour
     private void Death()
     {
             Time.timeScale = 0f;
-            deathMenuUI.SetActive(true);        
+            deathMenuUI.SetActive(true);
+            gameplayUI.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -275,6 +317,7 @@ public class PlayerInput : MonoBehaviour
         {
             Time.timeScale = 0f;
             endMenuUI.SetActive(true);
+
         }
 
         if (other.gameObject.CompareTag("Enemy"))
