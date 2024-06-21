@@ -7,25 +7,37 @@ public class Enemigo : MonoBehaviour
 {
     //NavMeshAgent agent;
     //PlayerInput target;
-    private float timer = 0f;
+    //private float timer = 0f;
     public Animator animator;
     private Transform player;
     private NavMeshAgent agent;
 
-    [SerializeField] public float detectionRange = 0f;
-    [SerializeField] public float attackRange = 0f;
+    [SerializeField] public float detectionRange = 5f;
+    [SerializeField] public float attackRange = 5f;
 
 
     // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        //if (animator == null)
+        //{
+        //    animator = GetComponentInChildren<Animator>();
+        //}
+        //player = GameObject.FindGameObjectWithTag("Player").transform;
+        //timer = 0f;
+
         if (animator == null)
         {
-            animator = GetComponentInChildren<Animator>();
+            Debug.LogError("Animator component not found on " + gameObject.name);
         }
+
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        timer = 0f;
+
+        if (player == null)
+        {
+            Debug.LogError("Player object not found. Ensure the player has the tag 'Player'.");
+        }
     }
 
     // Update is called once per frame
@@ -47,12 +59,12 @@ public class Enemigo : MonoBehaviour
 
             if (distanceToPlayer <= attackRange)
             {           
-                agent.isStopped = true;
+                //agent.isStopped = true;
                 animator.SetBool("IsAttacking", true);
             }
             else
             {
-                agent.isStopped = false;
+                //agent.isStopped = false;
                 animator.SetBool("IsAttacking", false);
                 animator.SetFloat("Speed", 1);
             }
@@ -60,7 +72,7 @@ public class Enemigo : MonoBehaviour
         else
         {
 
-            agent.isStopped = true;
+            //agent.isStopped = true;
             animator.SetFloat("Speed", 0);
             animator.SetBool("IsAttacking", false);
         }
