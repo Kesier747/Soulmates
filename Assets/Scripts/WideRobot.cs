@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class WideRobot : MonoBehaviour
 {
     public float detectionRange = 300f;
-    public float attackRange = 5f;
+    public float attackRange = 15f;
     public Animator animator;
     private Transform player;
     private NavMeshAgent agent;

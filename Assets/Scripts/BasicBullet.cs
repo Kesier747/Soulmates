@@ -20,8 +20,17 @@ public class BasicBullet : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy"))
         {
             other.gameObject.GetComponent<WideRobot>().ReceiveDamage(pistolDamage);
+            
             Destroy(gameObject);          
         }
+
+        if (other.gameObject.CompareTag("EnemyDrone"))
+        {
+            other.gameObject.GetComponent<Drone>().ReceiveDamage(pistolDamage);
+
+            Destroy(gameObject);
+        }
+        
     }
 
     private void OnCollisionEnter(Collision collision)

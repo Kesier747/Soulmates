@@ -68,6 +68,8 @@ public class PlayerInput : MonoBehaviour
     [SerializeField] private GameObject submachinegun;
     [SerializeField] private GameObject rifle;
 
+    private string activeWeapon = "hola";
+
     private Camera mainCamera;
     [SerializeField] private LayerMask whatIsGround;
     private float RayLength;
@@ -76,14 +78,19 @@ public class PlayerInput : MonoBehaviour
    
     void Start()
     {
+        activeWeapon = "Pistol";
         currentLife = lifeInit;
         controller = GetComponent<CharacterController>();
         spawnPoint = transform.position;
         mainCamera = FindObjectOfType<Camera>();
 
         gameplayUI.SetActive(true);
-        //submachinegunHeld= true;
-        pistolHeld = false;
+
+        pistolHeld = true;
+
+        
+
+        //Debug.log(pistolHeld + rifleHeld + submachinegunHeld);
         pistolIconUI.SetActive(false);
         overheat = 0;
         overheated= false;
@@ -93,6 +100,13 @@ public class PlayerInput : MonoBehaviour
 
     private void Update()
     {
+        //UnityEngine.Debug.log("arma activa = " + activeWeapon);
+        Debug.Log(activeWeapon);
+        if(pistolHeld == true)
+        {
+            pistolHeld = true;
+        }
+
         playerHealthText.text = "Vida = " + currentLife;
 
         if (Time.timeScale != 0)
@@ -118,17 +132,17 @@ public class PlayerInput : MonoBehaviour
             StartCoroutine(Dash());
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha1) && WeaponUIActive == true)
+        if (Input.GetKeyDown(KeyCode.Alpha1) && WeaponUIActive == true || activeWeapon == "Rifle" || activeWeapon == "SMG"/*&& pistolHeld == true*/)
         {
             EquippingPistol();
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha2) && WeaponUIActive == true)
+        if (Input.GetKeyDown(KeyCode.Alpha2) && WeaponUIActive == true /*&& submachinegunHeld == true*/)
         {
             EquippingSubmachinegun();
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha3) && WeaponUIActive == true)
+        if (Input.GetKeyDown(KeyCode.Alpha3) && WeaponUIActive == true /*&& rifleHeld == true*/)
         {
             EquippingRifle();
         }
@@ -333,6 +347,34 @@ public class PlayerInput : MonoBehaviour
             {
                 Death();
             }
+        }
+
+        if (other.gameObject.CompareTag("EnemyDrone"))
+        {
+            currentLife -= 20;
+            for (int i = currentLife / 10; i < lifeInit / 10; i++)
+            {
+                lifes[i].SetActive(false);
+            }
+
+            if (currentLife <= 0)
+            {
+                Death();
+            }
+        }
+
+        if (other.gameObject.CompareTag("SMGPickup"))
+        {
+            submachinegunHeld = true;
+            Destroy(other.gameObject);
+            activeWeapon = "SMG";
+        }
+
+        if (other.gameObject.CompareTag("RiflePickup"))
+        {
+            rifleHeld = true;
+            Destroy(other.gameObject);
+            activeWeapon = "Rifle";
         }
     }
 }

@@ -23,6 +23,13 @@ public class RifleBullet : MonoBehaviour
             other.gameObject.GetComponent<WideRobot>().ReceiveDamage(rifleDamage);
             Destroy(gameObject);
         }
+
+        if (other.gameObject.CompareTag("EnemyDrone"))
+        {
+            other.gameObject.GetComponent<Drone>().ReceiveDamage(rifleDamage);
+
+            Destroy(gameObject);
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
