@@ -111,7 +111,7 @@ public class PlayerInput : MonoBehaviour
         
 
         //UnityEngine.Debug.log("arma activa = " + activeWeapon);
-        Debug.Log(activeWeapon);
+        //Debug.Log(activeWeapon);
         if(pistolHeld == true)
         {
             pistolHeld = true;
@@ -218,6 +218,9 @@ public class PlayerInput : MonoBehaviour
     {
         inputH = Input.GetAxisRaw("Horizontal");
         inputV = Input.GetAxisRaw("Vertical");
+
+        animator.SetFloat("Horizontal", inputH);
+        animator.SetFloat("Vertical", inputV);
 
         controller.Move(new Vector3(inputH, 0, inputV).normalized * speed * Time.deltaTime);
     }
