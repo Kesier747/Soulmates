@@ -11,6 +11,7 @@ public class PlayerInput : MonoBehaviour
 {
 
     Rigidbody rb;
+    public Animator animator;
 
     private float inputH;
     private float inputV;
@@ -75,9 +76,21 @@ public class PlayerInput : MonoBehaviour
     private float RayLength;
 
     CharacterController controller;
-   
+
+    public GameObject model; // Reference to the model GameObject
+
     void Start()
     {
+        if (model != null)
+        {
+            animator = model.GetComponent<Animator>();
+        }
+
+        if (animator == null)
+        {
+            Debug.LogError("Animator component not found on the model GameObject.");
+        }
+
         activeWeapon = "Pistol";
         currentLife = lifeInit;
         controller = GetComponent<CharacterController>();
@@ -100,6 +113,8 @@ public class PlayerInput : MonoBehaviour
 
     private void Update()
     {
+        
+
         //UnityEngine.Debug.log("arma activa = " + activeWeapon);
         Debug.Log(activeWeapon);
         if(pistolHeld == true)
@@ -157,6 +172,7 @@ public class PlayerInput : MonoBehaviour
         pistolHeld = true;
         pistol.SetActive(true);
         pistolIconUI.SetActive(true);
+        animator.SetInteger("activeWeapon", 1);
 
         submachinegunHeld = false;
         submachinegun.SetActive(false);
@@ -171,6 +187,7 @@ public class PlayerInput : MonoBehaviour
         submachinegunHeld = true;
         submachinegun.SetActive(true);
         SubmachinegunIconUI.SetActive(true);
+        animator.SetInteger("activeWeapon", 2);
 
         pistolHeld = false;
         pistol.SetActive(false);
@@ -186,6 +203,7 @@ public class PlayerInput : MonoBehaviour
         rifleHeld = true;
         rifle.SetActive(true);
         rifleIconUI.SetActive(true);
+        animator.SetInteger("activeWeapon", 3);
 
         pistolHeld = false;
         pistol.SetActive(false);
