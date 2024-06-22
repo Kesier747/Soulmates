@@ -77,18 +77,13 @@ public class PlayerInput : MonoBehaviour
 
     CharacterController controller;
 
-    public GameObject model; // Reference to the model GameObject
+    public GameObject model;
 
     void Start()
     {
         if (model != null)
         {
             animator = model.GetComponent<Animator>();
-        }
-
-        if (animator == null)
-        {
-            Debug.LogError("Animator component not found on the model GameObject.");
         }
 
         activeWeapon = "Pistol";
