@@ -132,7 +132,7 @@ public class PlayerInput : MonoBehaviour
             StartCoroutine(Dash());
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha1) && WeaponUIActive == true || activeWeapon == "Rifle" || activeWeapon == "SMG"/*&& pistolHeld == true*/)
+        if (Input.GetKeyDown(KeyCode.Alpha1) && WeaponUIActive == true /*|| activeWeapon == "Rifle" || activeWeapon == "SMG"*//*&& pistolHeld == true*/)
         {
             EquippingPistol();
         }

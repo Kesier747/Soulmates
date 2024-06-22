@@ -1,0 +1,114 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: PlayerAvatarMask
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Bip001
+    m_Weight: 1
+  - m_Path: Bip001/H_Pelvis
+    m_Weight: 1
+  - m_Path: Bip001/H_Pelvis/H_Spine_2
+    m_Weight: 1
+  - m_Path: Bip001/H_Pelvis/H_Spine_2/H_Femur_Dcha
+    m_Weight: 1
+  - m_Path: Bip001/H_Pelvis/H_Spine_2/H_Femur_Dcha/H_Tibia_Dcha
+    m_Weight: 1
+  - m_Path: Bip001/H_Pelvis/H_Spine_2/H_Femur_Dcha/H_Tibia_Dcha/H_Pie_Dcha
+    m_Weight: 1
+  - m_Path: Bip001/H_Pelvis/H_Spine_2/H_Femur_Dcha/H_Tibia_Dcha/H_Pie_Dcha/H_DedosPie_Dcha
+    m_Weight: 1
+  - m_Path: Bip001/H_Pelvis/H_Spine_2/H_Femur_Izq
+    m_Weight: 1
+  - m_Path: Bip001/H_Pelvis/H_Spine_2/H_Femur_Izq/H_Tibia_Izq
+    m_Weight: 1
+  - m_Path: Bip001/H_Pelvis/H_Spine_2/H_Femur_Izq/H_Tibia_Izq/H_Pie_Izq
+    m_Weight: 1
+  - m_Path: Bip001/H_Pelvis/H_Spine_2/H_Femur_Izq/H_Tibia_Izq/H_Pie_Izq/H_DedosPie_Izq
+    m_Weight: 1
+  - m_Path: Bip001/H_Pelvis/H_Spine_2/H_Spine_1
+    m_Weight: 1
+  - m_Path: Bip001/H_Pelvis/H_Spine_2/H_Spine_1/H_Cuello
+    m_Weight: 1
+  - m_Path: Bip001/H_Pelvis/H_Spine_2/H_Spine_1/H_Cuello/H_Cabeza
+    m_Weight: 1
+  - m_Path: Bip001/H_Pelvis/H_Spine_2/H_Spine_1/H_Cuello/H_Cabeza/H_Coleta_1
+    m_Weight: 1
+  - m_Path: Bip001/H_Pelvis/H_Spine_2/H_Spine_1/H_Cuello/H_Cabeza/H_Coleta_1/H_Coleta_2
+    m_Weight: 1
+  - m_Path: Bip001/H_Pelvis/H_Spine_2/H_Spine_1/H_Cuello/H_Cabeza/H_Coleta_1/H_Coleta_2/H_Coleta_3
+    m_Weight: 1
+  - m_Path: Bip001/H_Pelvis/H_Spine_2/H_Spine_1/H_Cuello/H_Cabeza/H_Coleta_1/H_Coleta_2/H_Coleta_3/H_Coleta_4
+    m_Weight: 1
+  - m_Path: Bip001/H_Pelvis/H_Spine_2/H_Spine_1/H_Cuello/H_Cabeza/H_Coleta_1/H_Coleta_2/H_Coleta_3/H_Coleta_4/H_Coleta_5
+    m_Weight: 1
+  - m_Path: Bip001/H_Pelvis/H_Spine_2/H_Spine_1/H_Cuello/H_Cabeza/H_Coleta_1/H_Coleta_2/H_Coleta_3/H_Coleta_4/H_Coleta_5/H_Coleta_Fin
+    m_Weight: 1
+  - m_Path: Bip001/H_Pelvis/H_Spine_2/H_Spine_1/H_Cuello/H_Clavicula_Dcha
+    m_Weight: 1
+  - m_Path: Bip001/H_Pelvis/H_Spine_2/H_Spine_1/H_Cuello/H_Clavicula_Dcha/Bip001
+      RUpArmTwist
+    m_Weight: 1
+  - m_Path: Bip001/H_Pelvis/H_Spine_2/H_Spine_1/H_Cuello/H_Clavicula_Dcha/Bip001
+      RUpArmTwist/Bip001 RUpArmTwist1
+    m_Weight: 1
+  - m_Path: Bip001/H_Pelvis/H_Spine_2/H_Spine_1/H_Cuello/H_Clavicula_Dcha/Bip001
+      RUpArmTwist/Bip001 RUpArmTwist1/Bip001 RUpArmTwist2
+    m_Weight: 1
+  - m_Path: Bip001/H_Pelvis/H_Spine_2/H_Spine_1/H_Cuello/H_Clavicula_Dcha/Bip001
+      RUpArmTwist/Bip001 RUpArmTwist1/Bip001 RUpArmTwist2/Bip001 RUpArmTwist3
+    m_Weight: 1
+  - m_Path: Bip001/H_Pelvis/H_Spine_2/H_Spine_1/H_Cuello/H_Clavicula_Dcha/H_Humero_Dcha
+    m_Weight: 1
+  - m_Path: Bip001/H_Pelvis/H_Spine_2/H_Spine_1/H_Cuello/H_Clavicula_Dcha/H_Humero_Dcha/H_Radio_Dcha
+    m_Weight: 1
+  - m_Path: Bip001/H_Pelvis/H_Spine_2/H_Spine_1/H_Cuello/H_Clavicula_Dcha/H_Humero_Dcha/H_Radio_Dcha/H_Mano_Dcha
+    m_Weight: 1
+  - m_Path: Bip001/H_Pelvis/H_Spine_2/H_Spine_1/H_Cuello/H_Clavicula_Dcha/H_Humero_Dcha/H_Radio_Dcha/H_Mano_Dcha/H_Anular_Izq
+    m_Weight: 1
+  - m_Path: Bip001/H_Pelvis/H_Spine_2/H_Spine_1/H_Cuello/H_Clavicula_Dcha/H_Humero_Dcha/H_Radio_Dcha/H_Mano_Dcha/H_Corazon_Dcha
+    m_Weight: 1
+  - m_Path: Bip001/H_Pelvis/H_Spine_2/H_Spine_1/H_Cuello/H_Clavicula_Dcha/H_Humero_Dcha/H_Radio_Dcha/H_Mano_Dcha/H_Indice_Dcha
+    m_Weight: 1
+  - m_Path: "Bip001/H_Pelvis/H_Spine_2/H_Spine_1/H_Cuello/H_Clavicula_Dcha/H_Humero_Dcha/H_Radio_Dcha/H_Mano_Dcha/H_Me\xF1ique_Dcha"
+    m_Weight: 1
+  - m_Path: Bip001/H_Pelvis/H_Spine_2/H_Spine_1/H_Cuello/H_Clavicula_Dcha/H_Humero_Dcha/H_Radio_Dcha/H_Mano_Dcha/H_Pulgar_Dcha
+    m_Weight: 1
+  - m_Path: Bip001/H_Pelvis/H_Spine_2/H_Spine_1/H_Cuello/H_Clavicula_Izq
+    m_Weight: 1
+  - m_Path: Bip001/H_Pelvis/H_Spine_2/H_Spine_1/H_Cuello/H_Clavicula_Izq/Bip001 LUpArmTwist
+    m_Weight: 1
+  - m_Path: Bip001/H_Pelvis/H_Spine_2/H_Spine_1/H_Cuello/H_Clavicula_Izq/Bip001 LUpArmTwist/Bip001
+      LUpArmTwist1
+    m_Weight: 1
+  - m_Path: Bip001/H_Pelvis/H_Spine_2/H_Spine_1/H_Cuello/H_Clavicula_Izq/Bip001 LUpArmTwist/Bip001
+      LUpArmTwist1/Bip001 LUpArmTwist2
+    m_Weight: 1
+  - m_Path: Bip001/H_Pelvis/H_Spine_2/H_Spine_1/H_Cuello/H_Clavicula_Izq/Bip001 LUpArmTwist/Bip001
+      LUpArmTwist1/Bip001 LUpArmTwist2/Bip001 LUpArmTwist3
+    m_Weight: 1
+  - m_Path: Bip001/H_Pelvis/H_Spine_2/H_Spine_1/H_Cuello/H_Clavicula_Izq/H_Humero_Izq
+    m_Weight: 1
+  - m_Path: Bip001/H_Pelvis/H_Spine_2/H_Spine_1/H_Cuello/H_Clavicula_Izq/H_Humero_Izq/H_Radio_Izq
+    m_Weight: 1
+  - m_Path: Bip001/H_Pelvis/H_Spine_2/H_Spine_1/H_Cuello/H_Clavicula_Izq/H_Humero_Izq/H_Radio_Izq/H_Mano_Izq
+    m_Weight: 1
+  - m_Path: Bip001/H_Pelvis/H_Spine_2/H_Spine_1/H_Cuello/H_Clavicula_Izq/H_Humero_Izq/H_Radio_Izq/H_Mano_Izq/H_Anular_Izq
+    m_Weight: 1
+  - m_Path: Bip001/H_Pelvis/H_Spine_2/H_Spine_1/H_Cuello/H_Clavicula_Izq/H_Humero_Izq/H_Radio_Izq/H_Mano_Izq/H_Corazon_Izq
+    m_Weight: 1
+  - m_Path: Bip001/H_Pelvis/H_Spine_2/H_Spine_1/H_Cuello/H_Clavicula_Izq/H_Humero_Izq/H_Radio_Izq/H_Mano_Izq/H_Indice_Izq
+    m_Weight: 1
+  - m_Path: "Bip001/H_Pelvis/H_Spine_2/H_Spine_1/H_Cuello/H_Clavicula_Izq/H_Humero_Izq/H_Radio_Izq/H_Mano_Izq/H_Me\xF1ique_Izq"
+    m_Weight: 1
+  - m_Path: Bip001/H_Pelvis/H_Spine_2/H_Spine_1/H_Cuello/H_Clavicula_Izq/H_Humero_Izq/H_Radio_Izq/H_Mano_Izq/H_Pulgar_Izq
+    m_Weight: 1
+  - m_Path: default
+    m_Weight: 1
