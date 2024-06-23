@@ -165,8 +165,8 @@ public class PlayerInput : MonoBehaviour
         }
 
         HeatCooling();
-        Debug.Log(overheat);
-        Debug.Log("heated = " + overheated);
+        //Debug.Log(overheat);
+        //Debug.Log("heated = " + overheated);
     }
 
     private void EquippingPistol()
@@ -175,6 +175,7 @@ public class PlayerInput : MonoBehaviour
         pistol.SetActive(true);
         pistolIconUI.SetActive(true);
         animator.SetInteger("activeWeapon", 1);
+        FindObjectOfType<AudioManager>().Play("WeaponSwitch");
 
         submachinegunHeld = false;
         submachinegun.SetActive(false);
@@ -190,6 +191,7 @@ public class PlayerInput : MonoBehaviour
         submachinegun.SetActive(true);
         SubmachinegunIconUI.SetActive(true);
         animator.SetInteger("activeWeapon", 2);
+        FindObjectOfType<AudioManager>().Play("WeaponSwitch");
 
         pistolHeld = false;
         pistol.SetActive(false);
@@ -206,6 +208,7 @@ public class PlayerInput : MonoBehaviour
         rifle.SetActive(true);
         rifleIconUI.SetActive(true);
         animator.SetInteger("activeWeapon", 3);
+        FindObjectOfType<AudioManager>().Play("WeaponSwitch");
 
         pistolHeld = false;
         pistol.SetActive(false);
@@ -269,6 +272,7 @@ public class PlayerInput : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 GameObject bulletClone = Instantiate(pistolBulletPrefab, pistolBulletSpawnPoint.transform.position, transform.rotation);
+                FindObjectOfType<AudioManager>().Play("SmallBullet");
                 overheat += 10f;
             }
         }
@@ -278,6 +282,7 @@ public class PlayerInput : MonoBehaviour
             if (Input.GetKey(KeyCode.Mouse0))
             {
                 GameObject bulletClone = Instantiate(pistolBulletPrefab, submachinegunBulletSpawnPoint.transform.position, transform.rotation);
+                FindObjectOfType<AudioManager>().Play("SmallBullet");
                 overheat += 2f;
             }
         }
@@ -287,6 +292,7 @@ public class PlayerInput : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 GameObject bulletClone = Instantiate(rifleBulletPrefab, rifleBulletSpawnPoint.transform.position, transform.rotation);
+                FindObjectOfType<AudioManager>().Play("LargeBullet");
                 overheat += 40f;
             }
         }
@@ -343,7 +349,7 @@ public class PlayerInput : MonoBehaviour
     {
         if (other.gameObject.CompareTag("DeathFloor"))
         {
-            currentLife -= 1000;
+            Death();
         }
 
         if (other.gameObject.CompareTag("Key"))
@@ -354,6 +360,7 @@ public class PlayerInput : MonoBehaviour
 
         if (other.gameObject.CompareTag("YellowDoor") && yellowKeyAdquired == true)
         {
+            FindObjectOfType<AudioManager>().Play("Victory");
             Time.timeScale = 0f;
             endMenuUI.SetActive(true);
 

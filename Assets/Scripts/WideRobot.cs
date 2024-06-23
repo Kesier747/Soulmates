@@ -32,12 +32,12 @@ public class WideRobot : MonoBehaviour
             if (distanceToPlayer <= attackRange)
             {
                 agent.isStopped = true;
-                animator.SetBool("IsAttacking", true);
+                //animator.SetBool("IsAttacking", true);
             }
             else
             {
                 agent.isStopped = false;
-                animator.SetBool("IsAttacking", false);
+                //animator.SetBool("IsAttacking", false);
                 animator.SetFloat("Speed", agent.velocity.magnitude);
             }
         }
@@ -46,7 +46,7 @@ public class WideRobot : MonoBehaviour
             
             agent.isStopped = true;
             animator.SetFloat("Speed", 0);
-            animator.SetBool("IsAttacking", false);
+            //animator.SetBool("IsAttacking", false);
         }
     }
     //NavMeshAgent agent;
