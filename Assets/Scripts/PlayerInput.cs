@@ -75,6 +75,11 @@ public class PlayerInput : MonoBehaviour
     [SerializeField] private LayerMask whatIsGround;
     private float RayLength;
 
+    private bool unlockPistol = false;
+    private bool unlockSMG = false;
+    private bool unlockRifle = false;
+
+
     CharacterController controller;
 
     public GameObject model;
@@ -85,6 +90,8 @@ public class PlayerInput : MonoBehaviour
         {
             animator = model.GetComponent<Animator>();
         }
+
+        unlockPistol = true;
 
         activeWeapon = "Pistol";
         currentLife = lifeInit;
@@ -142,17 +149,17 @@ public class PlayerInput : MonoBehaviour
             StartCoroutine(Dash());
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha1) && WeaponUIActive == true /*|| activeWeapon == "Rifle" || activeWeapon == "SMG"*//*&& pistolHeld == true*/)
+        if (Input.GetKeyDown(KeyCode.Alpha1) && WeaponUIActive == true && unlockPistol == true /*|| activeWeapon == "Rifle" || activeWeapon == "SMG"*//*&& pistolHeld == true*/)
         {
             EquippingPistol();
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha2) && WeaponUIActive == true /*&& submachinegunHeld == true*/)
+        if (Input.GetKeyDown(KeyCode.Alpha2) && WeaponUIActive == true && unlockSMG == true /*&& submachinegunHeld == true*/)
         {
             EquippingSubmachinegun();
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha3) && WeaponUIActive == true /*&& rifleHeld == true*/)
+        if (Input.GetKeyDown(KeyCode.Alpha3) && WeaponUIActive == true && unlockRifle == true /*&& rifleHeld == true*/)
         {
             EquippingRifle();
         }
@@ -384,6 +391,7 @@ public class PlayerInput : MonoBehaviour
             submachinegunHeld = true;
             Destroy(other.gameObject);
             activeWeapon = "SMG";
+            unlockSMG = true;
         }
 
         if (other.gameObject.CompareTag("RiflePickup"))
@@ -391,6 +399,7 @@ public class PlayerInput : MonoBehaviour
             rifleHeld = true;
             Destroy(other.gameObject);
             activeWeapon = "Rifle";
+            unlockRifle = true;
         }
     }
 }
