@@ -31,7 +31,7 @@ public class Drone : MonoBehaviour
     {
         
         float distanceToPlayer = Vector3.Distance(player.position, transform.position);
-        Debug.Log(distanceToPlayer);
+        //Debug.Log(distanceToPlayer);
 
         if (distanceToPlayer <= detectionRange)
         {
@@ -53,6 +53,7 @@ public class Drone : MonoBehaviour
         {
             agent.enabled = false; 
             this.enabled = false; //el bicho pierde su alma (se queda sin script)
+            FindObjectOfType<AudioManager>().Play("RobotDeath");
             Destroy(gameObject);
         }
     }

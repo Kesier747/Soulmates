@@ -105,3 +105,9 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: FootSteps
+    clip: {fileID: 8300000, guid: 7000fca4950277a4f9e39996d17be395, type: 3}
+    volume: 0.319
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}

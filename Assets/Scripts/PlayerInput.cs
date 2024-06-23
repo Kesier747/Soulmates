@@ -69,7 +69,7 @@ public class PlayerInput : MonoBehaviour
     [SerializeField] private GameObject submachinegun;
     [SerializeField] private GameObject rifle;
 
-    private string activeWeapon = "hola";
+    //private string activeWeapon = "hola";
 
     private Camera mainCamera;
     [SerializeField] private LayerMask whatIsGround;
@@ -93,9 +93,11 @@ public class PlayerInput : MonoBehaviour
 
         unlockPistol = true;
 
-        activeWeapon = "Pistol";
+        //activeWeapon = "Pistol";
         currentLife = lifeInit;
+
         controller = GetComponent<CharacterController>();
+
         spawnPoint = transform.position;
         mainCamera = FindObjectOfType<Camera>();
 
@@ -119,7 +121,7 @@ public class PlayerInput : MonoBehaviour
 
         //UnityEngine.Debug.log("arma activa = " + activeWeapon);
         //Debug.Log(activeWeapon);
-        if(pistolHeld == true)
+        if (pistolHeld == true)
         {
             pistolHeld = true;
         }
@@ -232,7 +234,16 @@ public class PlayerInput : MonoBehaviour
         animator.SetFloat("Horizontal", inputH);
         animator.SetFloat("Vertical", inputV);
 
-        controller.Move(new Vector3(inputH, 0, inputV).normalized * speed * Time.deltaTime);
+        Vector3 move = new Vector3(inputH, 0.0f, inputV).normalized * speed;
+
+        controller.Move(move * Time.deltaTime);
+
+        //controller.Move(new Vector3(inputH, 0, inputV).normalized * speed * Time.deltaTime);
+
+        //if (move.magnitude > 0.1f)
+        //{
+        //    FindObjectOfType<AudioManager>().Play("FootSteps");
+        //}
     }
 
     private void ApplyRotation()
@@ -398,16 +409,18 @@ public class PlayerInput : MonoBehaviour
         if (other.gameObject.CompareTag("SMGPickup"))
         {
             submachinegunHeld = true;
+            FindObjectOfType<AudioManager>().Play("PickUp");
             Destroy(other.gameObject);
-            activeWeapon = "SMG";
+            //activeWeapon = "SMG";
             unlockSMG = true;
         }
 
         if (other.gameObject.CompareTag("RiflePickup"))
         {
             rifleHeld = true;
+            FindObjectOfType<AudioManager>().Play("PickUp");
             Destroy(other.gameObject);
-            activeWeapon = "Rifle";
+            //activeWeapon = "Rifle";
             unlockRifle = true;
         }
     }
