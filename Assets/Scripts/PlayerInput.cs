@@ -333,9 +333,10 @@ public class PlayerInput : MonoBehaviour
 
     private void Death()
     {
-            Time.timeScale = 0f;
-            deathMenuUI.SetActive(true);
-            gameplayUI.SetActive(false);
+        FindObjectOfType<AudioManager>().Play("PlayerDeath");
+        Time.timeScale = 0f;
+        deathMenuUI.SetActive(true);
+        gameplayUI.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)
