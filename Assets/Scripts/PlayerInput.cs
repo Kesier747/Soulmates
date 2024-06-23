@@ -354,6 +354,7 @@ public class PlayerInput : MonoBehaviour
 
         if (other.gameObject.CompareTag("Key"))
         {
+            FindObjectOfType<AudioManager>().Play("PickUp");
             Destroy(other.gameObject);
             yellowKeyAdquired = true;
         }

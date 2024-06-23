@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,6 +11,8 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject pauseMenuUI;
     public GameObject deathMenuUI;
+
+    public GameObject controlsUI;
 
     [SerializeField] private GameObject gameplayUI;
 
@@ -22,11 +25,13 @@ public class PauseMenu : MonoBehaviour
             if (GameIsPaused) 
             {
                 Resume();
+                FindObjectOfType<AudioManager>().Play("Beep");
                 gameplayUI.SetActive(true);
             }
             else
             {
                 Pause();
+                FindObjectOfType<AudioManager>().Play("Beep");
                 gameplayUI.SetActive(false);
             }
         }
@@ -40,8 +45,16 @@ public class PauseMenu : MonoBehaviour
     public void Resume()
     {
         pauseMenuUI.SetActive(false);
+        gameplayUI.SetActive(true);
         Time.timeScale = 1.0f;
         GameIsPaused = false;
+    }
+
+    public void Controls()
+    {
+        pauseMenuUI.SetActive(true);
+        Time.timeScale = 0f;
+        GameIsPaused = true;
     }
 
     void Pause()

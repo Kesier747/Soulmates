@@ -79,6 +79,7 @@ public class WideRobot : MonoBehaviour
             //anim.enabled = false; //ya no se mueve
             //CambiarEstadoHuesos(false); //adivina
             this.enabled = false; //el bicho pierde su alma (se queda sin script)
+            FindObjectOfType<AudioManager>().Play("RobotDeath");
             Destroy(gameObject);
         }
     }

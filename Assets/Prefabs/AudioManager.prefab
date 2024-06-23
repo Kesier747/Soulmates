@@ -81,3 +81,27 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: Victory
+    clip: {fileID: 8300000, guid: 0edf32dd8026c5f42bf826e324a4df9d, type: 3}
+    volume: 0.402
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: RobotDeath
+    clip: {fileID: 8300000, guid: e7a94e3c4ad199f42a3bb0c33bbb5eb3, type: 3}
+    volume: 0.402
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PickUp
+    clip: {fileID: 8300000, guid: 6114db1579d00b54fa4ef764534be5a7, type: 3}
+    volume: 0.402
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Beep
+    clip: {fileID: 8300000, guid: 2059dc5999ba15548909b0e0a668016e, type: 3}
+    volume: 0.402
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
